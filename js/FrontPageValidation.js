@@ -51,7 +51,7 @@
             }
             function checkPasswordStrength(txt)
             {
-                checkMatch('repasswordTXT');
+                //checkMatch('repasswordTXT');
                 var strength = 0;
                 var ret = ["Weak", "Moderate", "Strong", "Very Strong"];
                 if(/[A-Z]/.test(document.getElementById(txt).value))strength++;
