@@ -85,5 +85,5 @@ $("input[value=\'\']").addClass(\'empty\');
     
     
     
-    include 'Template/Template.html';
+    include 'Template/FrontPageTemplate.html';
 ?>
