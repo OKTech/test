@@ -1,7 +1,6 @@
 
-/*alert("here!");
 
-function validatePassword(){
+/*function validatePassword(){
 	var passText = passTextBox.value;
 	var returnValue = "";
 	if (passText.length < 8) returnValue += "The Password should be at least 8 characters long!</br>";
@@ -41,7 +40,7 @@ function whenPassChange(){
 	var password = document.getElementById(pass_id);
 	alert(validatePassword(password));
 }*/
-
+/*document.getElementById('fnext_id').disabled = true;
 function onChange(){
 	var fnext = document.getElementById('fnext_id');
 	var snext = document.getElementById('snext_id');
@@ -52,16 +51,13 @@ function onChange(){
 	var passValue = pass.value;
 	var repassValue = repass.value;
 
-	if (!emailValue.length || !passValue.length || !repass.length){
+	if (emailValue.length == 0 || passValue.length == 0 || repassValue.length == 0){
 		fnext.disabled = true;
 	}
 	else fnext.disabled = false;
 
 }
-
-
-
-
+*/
 
 
 

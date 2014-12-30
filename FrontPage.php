@@ -68,18 +68,18 @@
 	    </form>
 	</div>
     <br style="clear: left;" />
-</div><br style="clear: left;" />
-<script>
-$("input[value=\'\']").addClass(\'empty\');
-        $(\'input\').keyup(function(){
-            if( $(this).val() === ""){
-                $(this).addClass("empty");
-            }else{
-                $(this).removeClass("empty");
-            }
-        });
-</script>
-<script src="js/FrontPageValidation.js" type="text/javascript"></script>
+    </div><br style="clear: left;" />
+    <script>
+    $("input[value=\'\']").addClass(\'empty\');
+            $(\'input\').keyup(function(){
+                if( $(this).val() === ""){
+                    $(this).addClass("empty");
+                }else{
+                    $(this).removeClass("empty");
+                }
+            });
+    </script>
+    <script src="js/FrontPageValidation.js" type="text/javascript"></script>
 
     ';
     
