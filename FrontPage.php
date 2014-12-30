@@ -7,7 +7,7 @@
     $content_title = "";
     $content = 
 '
-	  <div style="float:left;">
+	<div style="float:left;">
 	
 	<div align="left" style="float:left; width:49%;">
 	    <h2 align="center" style="font-size: 36px; font-weight: bold;">School Registration</h2>
