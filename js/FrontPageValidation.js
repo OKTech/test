@@ -51,6 +51,8 @@
             }
             function checkPasswordStrength(txt)
             {
+                var x = document.getElementById(txt);
+                
                 //checkMatch('repasswordTXT');
                 var strength = 0;
                 var ret = ["Weak", "Moderate", "Strong", "Very Strong"];
@@ -61,20 +63,27 @@
                 
                 if(strength == 0)
                 {
-                    document.getElementById("strengthLBL").innerHTML = "Please enter a password.";
-                    document.getElementById("strengthLBL").style.color = 'red';
+                    //document.getElementById("strengthLBL").innerHTML = "Please enter a password.";
+                    //document.getElementById("strengthLBL").style.color = 'red';
+                    x.setCustomValidity('It cannot bempty!');
                     return False(3);
                 }
                 else if(strength <= 2)
                 {
-                    document.getElementById("strengthLBL").innerHTML = "Not valid - Password Strength: " + ret[strength-1] + "  ** Make it stronger.";
-                    document.getElementById("strengthLBL").style.color = 'red';
+                    if(strength == 1) x.style.cssText = "background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center; border: 1px solid #b03535;  box-shadow: 0px 0px 8px #b03535;  -moz-box-shadow: 0px 0px 8px #b03535; -webkit-box-shadow: 0px 0px 8px #b03535; ";
+                    if(strength == 2) x.style.cssText = "background: #fff url(./css/images/password-weak.png) no-repeat 98% center; border: 1px solid #b03535;  box-shadow: 0px 0px 8px #b03535;  -moz-box-shadow: 0px 0px 8px #b03535; -webkit-box-shadow: 0px 0px 8px #b03535; ";
+                    //document.getElementById("strengthLBL").innerHTML = "Not valid - Password Strength: " + ret[strength-1] + "  ** Make it stronger.";
+                    //document.getElementById("strengthLBL").style.color = 'red';
+                    x.setCustomValidity('Email format is incorrect.');
                     return False(3);
                 }
                 else
                 {
-                    document.getElementById("strengthLBL").innerHTML = "Valid - Password Strength: " + ret[strength-1];
-                    document.getElementById("strengthLBL").style.color = 'green';
+                    if(strength == 3) x.style.cssText = "background: #fff url(./css/images/password-moderate.png) no-repeat 98% center; border: 1px solid #28921f; box-shadow: 0px 0px 8px #28921f; -moz-box-shadow: 0px 0px 8px #28921f;  -webkit-box-shadow: 0px 0px 8px #28921f;"; 
+                    if(strength == 4) x.style.cssText = "background: #fff url(./css/images/password-strong.png) no-repeat 98% center; border: 1px solid #28921f; box-shadow: 0px 0px 8px #28921f; -moz-box-shadow: 0px 0px 8px #28921f;  -webkit-box-shadow: 0px 0px 8px #28921f;"; 
+                    //document.getElementById("strengthLBL").innerHTML = "Valid - Password Strength: " + ret[strength-1];
+                    //document.getElementById("strengthLBL").style.color = 'green';
+                    x.setCustomValidity('');
                     return True(3);
                 }
             }
@@ -208,5 +217,6 @@
                 document.getElementById('submitBTN').disabled = false;
                 return true;
             }
+            
             
             
