@@ -63,6 +63,7 @@
                 
                 if(strength == 0)
                 {
+                    x.style.cssText = "background: #fff; border: 1px solid #7bc1f7; box-shadow: 0px 0px 8px #7bc1f7; -moz-box-shadow: 0px 0px 8px #7bc1f7; -webkit-box-shadow: 0px 0px 8px #7bc1f7; ";
                     //document.getElementById("strengthLBL").innerHTML = "Please enter a password.";
                     //document.getElementById("strengthLBL").style.color = 'red';
                     x.setCustomValidity('It cannot bempty!');
