@@ -1,0 +1,112 @@
+
+
+
+
+
+.form_hint, .required_notification {font-size: 11px;}
+
+.required_notification {
+    color:#d45252; 
+    margin:5px 0 0 0; 
+    display:inline;
+    float:right;
+}
+
+input:required, textarea:required {
+    background: #fff url(icons/asterisk3.png) no-repeat 98% center;
+}
+
+input:required:focus:valid, textarea:required:focus:valid { /* when a field is considered valid by the browser */
+    background: #fff url(icons/valid_small.png) no-repeat 98% center;
+    
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f; 
+    -webkit-box-shadow: 0px 0px 8px #28921f; 
+}
+input:required:valid, textarea:required:valid { /* when a field is considered valid by the browser */
+    background: #fff url(icons/valid_small.png) no-repeat 98% center;
+    
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f; 
+    -webkit-box-shadow: 0px 0px 8px #28921f; 
+}
+
+input:required:hover, textarea:required:hover {
+    background: #FFF9DF url(icons/asterisk3.png) no-repeat 98% center;
+}
+
+
+
+input:required:focus:invalid, textarea:required:focus:invalid { /* when a field is considered invalid by the browser */
+    background: #fff url(icons/invalid_small.png) no-repeat 98% center;
+    
+    border: 1px solid #b03535; 
+    box-shadow: 0px 0px 8px #b03535; 
+    -moz-box-shadow: 0px 0px 8px #b03535; 
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+
+input:required:invalid, textarea:required:invalid { /* when a field is considered invalid by the browser */
+    background: #fff url(icons/invalid_small.png) no-repeat 98% center;
+    
+    border: 1px solid #b03535; 
+    box-shadow: 0px 0px 8px #b03535; 
+    -moz-box-shadow: 0px 0px 8px #b03535; 
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+
+
+input:focus, textarea:focus {
+    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
+    
+    border: 1px solid #c4c4c4; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+}
+
+input.empty:invalid, input[value='']{
+    
+    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
+    
+    border: 1px solid #c4c4c4; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+input.empty:invalid:focus, input[value='']:invalid:focus{
+    
+    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
+    
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+}
+
+.form_hint {
+    background: #d45252;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left:8px;
+    padding: 1px 6px;
+    z-index: 999; /* hints stay above all other elements */
+    position: absolute; /* allows proper formatting if hint is two lines */
+    display: none;
+}
+
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+.contact_form li{
+    padding:12px; 
+    border-bottom:1px solid #eee;
+    position:relative;
+}
