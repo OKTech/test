@@ -19,29 +19,34 @@
                 document.getElementById('submitBTN').disabled = true;
                 resetAllERRLabels();
             }
-            function checkNameValidity(txt, err, labelTXT)
+            function checkNameValidity(txt, labelTXT)
             {
-                alert('omg');
-                if(/^[A-Z][a-z]+$/.test(document.getElementById(txt).value))
+                var x = document.getElementById(txt);
+                if(/^[A-Z][a-z]+$/.test(x.value))
                 {
-                    document.getElementById(err).innerHTML = 'Valid';
-                    document.getElementById(err).style.color = 'green';
+                    //document.getElementById(err).innerHTML = 'Valid';
+                    //document.getElementById(err).style.color = 'green';
+                    x.setCustomValidity('');
                     return True(txt=='firstnameTXT'?0:1);
                 }
-                document.getElementById(err).innerHTML = labelTXT + ' should start with a capital letter, and followed by one or more small letters.';
-                document.getElementById(err).style.color = 'red';
+                x.setCustomValidity(labelTXT + ' has to start with a capital letter and contain alphabet only.');
+                //document.getElementById(err).innerHTML = labelTXT + ' should start with a capital letter, and followed by one or more small letters.';
+                //document.getElementById(err).style.color = 'red';
                 return False(txt=='firstnameTXT'?0:1);
             }
-            function checkEmailValidity(txt, err)
+            function checkEmailValidity(txt)
             {
-                if(/[A-Z0-9a-z]+@[A-Z0-9a-z]+\.[A-Z0-9a-z]+/.test(document.getElementById(txt).value))
+                var x = document.getElementById(txt);
+                if(/[A-Z0-9a-z]+@[A-Z0-9a-z]+\.[A-Z0-9a-z]+/.test(x.value))
                 {
-                    document.getElementById(err).innerHTML = 'Valid';
-                    document.getElementById(err).style.color = 'green';
+                    //document.getElementById(err).innerHTML = 'Valid';
+                    //document.getElementById(err).style.color = 'green';
+                    x.setCustomValidity('');
                     return True(2);
                 }
-                document.getElementById(err).innerHTML = 'Email should be like example@example.example'
-                document.getElementById(err).style.color = 'red';
+                x.setCustomValidity('Email format is incorrect.');
+                //document.getElementById(err).innerHTML = 'Email should be like example@example.example'
+                //document.getElementById(err).style.color = 'red';
                 return False(2);
             }
             function checkPasswordStrength(txt)
@@ -73,21 +78,25 @@
                     return True(3);
                 }
             }
-            function checkMatch(txt)
+            function checkMatch(txt, txt2)
             {
-                if(document.getElementById(txt).value == "")
+                var x = document.getElementById(txt);
+                var y = document.getElementById(txt2);
+                //if(x.value == "")
                 {
-                    document.getElementById("matchLBL").innerHTML = "Please re-enter the password.";
-                    return False(4);
+                  //  document.getElementById("matchLBL").innerHTML = "Please re-enter the password.";
+                  //  return False(4);
                 }
-                if(document.getElementById(txt).value == document.getElementById('passwordTXT').value)
+                if(x.value == y.value)
                 {
-                    document.getElementById("matchLBL").innerHTML = "Match";
-                    document.getElementById("matchLBL").style.color = 'green';
+                    y.setCustomValidity('');
+                    //document.getElementById("matchLBL").innerHTML = "Match";
+                    //document.getElementById("matchLBL").style.color = 'green';
                     return True(4);
                 }
-                document.getElementById("matchLBL").innerHTML = "Doesn't match!";
-                document.getElementById("matchLBL").style.color = 'red';
+                y.setCustomValidity('Email is not matching the one above.');
+                //document.getElementById("matchLBL").innerHTML = "Doesn't match!";
+                //document.getElementById("matchLBL").style.color = 'red';
                 return False(4);
             }
             function fillbirthdaySLCT()
@@ -199,3 +208,5 @@
                 document.getElementById('submitBTN').disabled = false;
                 return true;
             }
+            
+            

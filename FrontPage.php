@@ -5,7 +5,8 @@
     
     $title = "Home Page";
     $content_title = "";
-    $content = '
+    $content = 
+'
 	  <div style="float:left;">
 	
 	<div align="left" style="float:left; width:49%;">
@@ -36,19 +37,21 @@
 	<div style="float:left; border-left:1px solid #e3e3e3; height:500px; width:1%;"></div>
 
 	<div align="left" style="float:left; width:49%; margin-left: 0px;">
-	    <form action="RegistrationComplete.php" name="signUpForm" method="POST">
+	    <form class = "contact_form" action="RegistrationComplete.php" name="signUpForm" method="POST" noValidate>
 	    
 		<h2 align="center" style="font-size: 36px; font-weight: bold;">Sign Up</h2>
 		<h3 align="center" style="color:#636363; font-size:20px;">It\'s for free!</h3>
 
 		<br/>
 
-		<input placeholder="First Name" class="textbox" type="text" name="firstnameTXT" id="firstnameTXT" oninput="checkNameValidity(\'firstnameTXT\', \'firstnameERR\', \'First Name\')" style="width:35%;">
-		<input placeholder="Last Name" class="textbox" type="text" name="lastnameTXT" id="lastnameTXT" oninput="checkNameValidity(\'lastnameTXT\', \'lastnameERR\', \'Last Name\')" style="width:35%;">
+		<input value="" placeholder="First Name" class="textbox" type="text" name="firstnameTXT" id="firstnameTXT" oninput="checkNameValidity(\'firstnameTXT\', \'First Name\')" style="width:35%;" required/>
+		<span class="form_hint">Proper format, example: Ahmed Kamel</span>
 
-		<input placeholder="Email" class="textbox" type="text" name="emailTXT">
-		<input placeholder="Re-enter Email" class="textbox" type="text" name="emailagainTXT">
-		<input type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT">
+		<input value="" placeholder="Last Name" class="textbox" type="text" name="lastnameTXT" id="lastnameTXT" oninput="checkNameValidity(\'lastnameTXT\', \'Last Name\')" style="width:35%;" required/>
+
+		<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="emailTXT" oninput="checkEmailValidity(\'emailTXT\')" required />
+		<input value="" placeholder="Re-enter Email" class="textbox" type="text" name="emailagainTXT" id="emailagainTXT" oninput="checkMatch(\'emailTXT\', \'emailagainTXT\')" required>
+		<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" required>
 
 		<h3 align="left" style="margin-left: 5px; margin-top: 10px;color:#636363; font-size:20px;">Birthday</h3>
 		<select name="birthdaySLCT" id="day" class="birthday_homepage"><option value="0" selected="1">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
@@ -61,15 +64,26 @@
 		<br/>
 		<div style="padding-top: 10px; padding-left: 10px; font-size:11px; clear: both; align:left; width:100%"><p>By clicking Sign Up, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</p></div>
 
-		<div align="center"><input value="Sign Up" type="submit" name="signupBTN" class="signup_button"/></div>
+		<div align="center"><input value="Sign Up" type="submit" name="signupBTN" class="signup_button" id="submitBTN"/></div>
 	    </form>
 	</div>
     <br style="clear: left;" />
 </div><br style="clear: left;" />
-	    ';
-    
-    
-    
-    include 'Template/Template.php';
-?>
+<script>
+$("input[value=\'\']").addClass(\'empty\');
+        $(\'input\').keyup(function(){
+            if( $(this).val() === ""){
+                $(this).addClass("empty");
+            }else{
+                $(this).removeClass("empty");
+            }
+        });
+</script>
+<script src="js/FrontPageValidation.js" type="text/javascript"></script>
 
+    ';
+    
+    
+    
+    include 'Template/Template.html';
+?>
