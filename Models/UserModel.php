@@ -14,10 +14,6 @@ class UserModel
 	
 	$this->PerformQuery($query);
     }
-	function LoginUser($user)
-	{
-		return SelectUser($user);
-	}
 	function SelectUser($user)
 	{
 		require 'Models/Credentials_Copy.php';
@@ -26,12 +22,24 @@ class UserModel
 		$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 		while($row= mysqli_fetch_array($result))
 		{
+			/*echo $myrow["firstname"];
+			echo "</br>";
+			echo $myrow["lastname"];
+			echo "</br>";
+			echo $myrow["email"];
+			echo "</br>";
+			echo $myrow["password"];*/
 			session.start();
 			// 3awzeen ne7ot el first name wel last name fel session
 			return 1;
 		}
 		return 0;
 	}
+	function LoginUser($user)
+	{
+		return SelectUser($user);
+	}
+	
 	function UpdateUser(UserEntity $user)
 	{
 		$query='update usertab set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';

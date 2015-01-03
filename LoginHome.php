@@ -26,6 +26,7 @@
     else
     {
 		header("Location: Login.php");
+		echo ' <script type="text/javascript"> alert("The username or password you entered is incorrect! Please enter again");  </script>';
     }
     include 'Template/Template.php';
 ?>
