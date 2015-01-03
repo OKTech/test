@@ -4,31 +4,27 @@ $user= "root";
 $pass= "";
 $hostname= "localhost";
 $db = @mysql_connect($hostname,$user,$pass) or die ("could not connect to database");
-$select = mysql_select_db("",$db);
+$select = mysql_select_db("usersettings",$db);
 
-$username=$_POST['name'];
-$useremail=$_POST['email_name'];
-$userpassword=$_POST['name_password'];
-$usergenter=$_POST['genter'];
-
-#$id, $firstname, $lastname, $email, $password, $birthday, $birthmonth, $birthyear, $gender
-
-#$username=stripslashes($username);
-#$userpassword=stripslashes($userpassword);
-
-
-#$query="select * from abdo where name='$username' and password='$userpassword'";
-//$query="insert into sign_personal values('$username','$userday','$usermonth','$useryear','$useremail','$userpassword','$usergenter')";
-$query="update userTBl set $db_username=$username,$db_useremail=$useremail ,........ ";
+$firstname=$_POST['firstnameTXT'];
+$lastname=$_POST['lastnameTXT'];
+$email=$_POST['emailTXT'];
+$password_old=$_POST['passwordTXT'];
+$password_new=$_POST['passwordTXT1'];
+//$query="update usertab set firstname='.$firstname.' ,lastname='.$lastname.' ,email='.$email.' ,password_new='.$password_new.' where password='.$password_old.' ";
+//$query="insert into usertab values ('.$firstname.','.$lastname.','.$email.','.$password_new.')";
+#$check="select password from usertab";
+$query="update usertab set firstname='.$firstname.' ,lastname='.$lastname.',password='.$password_new.' where email='.$email.'";
+#echo '$check';
 $result=mysql_query($query);
-#$count=mysql_num_rows($result);
-
   if($result){
-    header("location:login_muisc_sucess.php");
+    header("location:update_success.php");
+    //echo 'there is Error!';
   }
   else
-  { 
+  {
      echo 'there is Error!';
+	 //header("location:update_success.php");
   } 
-
+mysql_close($db);
 ?>
