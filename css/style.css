@@ -590,3 +590,11 @@ input.empty:invalid:focus, input[value='']:invalid:focus{
     border-bottom:1px solid #eee;
     position:relative;
 }
+
+.tooWeak{
+    background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center;
+    border: 1px solid #b03535; 
+    box-shadow: 0px 0px 8px #b03535;
+    -moz-box-shadow: 0px 0px 8px #b03535;
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
