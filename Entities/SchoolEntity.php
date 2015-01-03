@@ -4,7 +4,7 @@ class SchoolEntity
 {
     public $username, $password, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address;
     
-    public function __construct($id, $username, $password, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address)
+    public function __construct($id, $username, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address)
     {
 	$this->username = $username;
 	$this->password = $password;
@@ -17,7 +17,6 @@ class SchoolEntity
 	$this->phone = $phone;
 	$this->fax = $fax;
 	$this->address = $address;
-
     }
 }
 

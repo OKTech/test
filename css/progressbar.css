@@ -99,7 +99,7 @@ body {
 	color: black;
 	text-transform: uppercase;
 	font-size: 11px;
-	width: 33.33%;
+	width: 33%;
 	float: left;
 	position: relative;
 }
@@ -112,7 +112,7 @@ body {
 	font-size: 10px;
 	color: #333;
 	background: lightblue;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
@@ -194,4 +194,16 @@ body {
     padding: 4px 8px 4px 8px;
     
    
+}
+
+.submitclass {
+	width: 110px;
+	background: #49a9cb;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
 }

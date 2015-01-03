@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/progressbar.css" type="text/css" media="all" />
 		
 	<!-- multistep form -->
-	<form id="msform" action="ShcoolRegistration.php" method="POST">
+	<form id="msform" action="SchoolRegistrationValidation.php" method="POST" noValidation>
 		<!-- progressbar -->
 		<ul id="progressbar">
 			<li class="active">Account Setup</li>
@@ -23,8 +23,8 @@
 		<!-- fieldsets -->
 		<fieldset>
                         <h3 class="fs-subtitle">Personal Identification</h3>
-			<input value="" placeholder="Username" class="textbox" type="text" name="usernameTXT" id="username_id" oninput="checkNameValidity(\'username_id\', \'username\')" style="width:90%; height:50px" required/>
-			<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" style="width:90%; height:50px" required>
+			<input value="" placeholder="Username" class="textbox" type="text" name="usernameTXT" id="username_id" oninput="checkNameValidity(\'username_id\', \'username\')" style="width:90%; height:50px"/>
+			<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" style="width:90%; height:50px">
 			<input type="button" name="next" class="next action-button" value="Next" id="fnext_id" style="height:40px" />
 		</fieldset>
 		<fieldset>
@@ -39,10 +39,10 @@
                             </select> 
                         </div>
                         </br></br>
-                        <input value="" placeholder="School Name" class="textbox" type="text" name="schoolnameTXT" id="schoolname_id" oninput="checkNameValidity(\'schoolname_id\', \'schoolname\')" style="width:100%; height:50px" required/>
-                        <input value="" placeholder="Twitter Account" class="textbox" type="text" name="twitterTXT" id="twitter_id" oninput="" style="width:100%; height:50px" required/>
-			<input value="" placeholder="Facebook Page" class="textbox" type="text" name="facebookTXT" id="facebook_id" oninput="" style="width:100%; height:50px" required/>
-			<input value="" placeholder="Google Plus" class="textbox" type="text" name="googleTXT" id="google_id" oninput="" style="width:100%; height:50px" required/>
+                        <input value="" placeholder="School Name" class="textbox" type="text" name="schoolnameTXT" id="schoolname_id" oninput="checkNameValidity(\'schoolname_id\', \'schoolname\')" style="width:100%; height:50px"/>
+                        <input value="" placeholder="Twitter Account" class="textbox" type="text" name="twitterTXT" id="twitter_id" oninput="" style="width:100%; height:50px"/>
+			<input value="" placeholder="Facebook Page" class="textbox" type="text" name="facebookTXT" id="facebook_id" oninput="" style="width:100%; height:50px"/>
+			<input value="" placeholder="Google Plus" class="textbox" type="text" name="googleTXT" id="google_id" oninput="" style="width:100%; height:50px"/>
                         <h3 class="mytext">Profile Picture:
                         <input type="file" name="upload" id="upload_id" value="Profile Picture" style="width:60%"></h3>
                         </br>
@@ -52,13 +52,14 @@
 		<fieldset>
 			<h3 class="fs-subtitle">Contact Details</h3>
 
-			<input value="" placeholder="Phone" class="textbox" type="text" name="phoneTXT" id="phone_id" oninput="" style="width:100%; height:50px" required/>
-			<input value="" placeholder="Fax" class="textbox" type="text" name="faxTXT" id="twitter_id" oninput="" style="width:100%; height:50px" required/>
+			<input value="" placeholder="Phone" class="textbox" type="text" name="phoneTXT" id="phone_id" oninput="" style="width:100%; height:50px"/>
+			<input value="" placeholder="Fax" class="textbox" type="text" name="faxTXT" id="twitter_id" oninput="" style="width:100%; height:50px"/>
 			<textarea value="" placeholder="Address" class="addresstextarea" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px"/></textarea>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
-			<input type="submit" name="submit" class="submit action-button" value="Submit" />
+			<input type="submit" name="submit" class="action-button" value="Submit" id="submit_id" />
 		</fieldset> 
 	</form>
+        <script src="js/School Registration.js" type="text/javascript"></script>
         <script>
             $("input[value=\'\']").addClass(\'empty\');
             $(\'input\').keyup(function(){
@@ -72,8 +73,8 @@
 	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery.easing.min.js" type="text/javascript"></script>
 	<script src="js/progressbar.js" type="text/javascript"></script>
-        <script src="js/FrontPageValidation" type="text/javascript"></script>
-	<script src="js/SchoolRegistration.js" type="text/javascript"></script>
+        <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
+	
         <link rel="stylesheet" href="css/SchoolRegistration.css" type="text/css"/>
 		
 	    <br style="clear: left;" />
@@ -86,6 +87,6 @@
     
     
     
-    include 'Template/FrontPageTemplate.html';
+    include 'Template/MainTemplate.html';
 ?>
 

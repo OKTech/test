@@ -1,6 +1,6 @@
 <?php
 
-require ("Models/UserModel.php");
+require ("Models/SchoolModel.php");
 
 class SchoolController {
     
@@ -16,12 +16,12 @@ class SchoolController {
 	$fax = $_POST["facTXT"];
 	$address = $_POST["addressTXT"];
 	$country = $_POST["country"];
-        $grade = $_POST["grade"]
+        $grade = $_POST["grade"];
 	
-	$school = new SchoolEntity(-1, $firstname, $lastname, $email, $password, $birthday, $birthmonth, $birthyear, $gender);
+	$school = new SchoolEntity (-1, $username, $schoolName, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address);
 	
-	$userModel = new UserModel();
-	$userModel->InsertUser($user);
+	$schoolModel = new SchoolModel();
+	$schoolModel->InsertSchool($school);
     }
 }
 ?>
