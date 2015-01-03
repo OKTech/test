@@ -3,6 +3,7 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
+    $header = "";
     $title = "User Settings";
     $content_title = "Settings";
     $content = 

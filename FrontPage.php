@@ -83,5 +83,5 @@
 
     ';
     
-    include 'Template/FrontPageTemplate.html';
+    include 'Template/FrontPageTemplate.php';
 ?>
