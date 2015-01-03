@@ -1,19 +1,19 @@
 
-
 <?php
+
+
     require './Controllers/UserController.php';
     $userController = new UserController();
     
     $title = "School Registration";
     $content_title = "";
     $content = '
-    <script type="text/javascript" src="js/School Registration.js"></script>
 	<div style="float:center;">
 		
 	<link rel="stylesheet" href="css/progressbar.css" type="text/css" media="all" />
 		
 	<!-- multistep form -->
-	<form id="msform">
+	<form id="msform" action="ShcoolRegistration.php" method="POST">
 		<!-- progressbar -->
 		<ul id="progressbar">
 			<li class="active">Account Setup</li>
@@ -31,10 +31,10 @@
                         <h3 class="fs-subtitle">School Information</h3>
 			
                         <div>
-                            <select id="selectCountry_id" class="dropdown" class="birthday_homepage" style="width:50%; float:left;">
+                            <select name="country" id="day" class="mydrop" style="width:48%; float:left;">
                                     <option>Country</option>
                             </select> 
-                            <select id="grade_id" class="dropdown" class="birthday_homepage" style="width:50%; float:left;">
+                            <select name="grade" id="month" class="mydrop" style="width:48%; float:left;">
                                     <option>Grade</option>
                             </select> 
                         </div>
@@ -43,8 +43,9 @@
                         <input value="" placeholder="Twitter Account" class="textbox" type="text" name="twitterTXT" id="twitter_id" oninput="" style="width:100%; height:50px" required/>
 			<input value="" placeholder="Facebook Page" class="textbox" type="text" name="facebookTXT" id="facebook_id" oninput="" style="width:100%; height:50px" required/>
 			<input value="" placeholder="Google Plus" class="textbox" type="text" name="googleTXT" id="google_id" oninput="" style="width:100%; height:50px" required/>
-			<input value="" placeholder="" class="textbox" type="text" name="picTXT" id="pic_id" oninput="" style="width:100%; height:50px;" required/>
-			<input type="button" name="uplodeButton" calss="upload_button" value="upload" style="width:50%;"></br>
+                        <h3 class="mytext">Profile Picture:
+                        <input type="file" name="upload" id="upload_id" value="Profile Picture" style="width:60%"></h3>
+                        </br>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
 			<input type="button" name="next" class="next action-button" value="Next" id="snext_id" onClick="nextClick()" />
 		</fieldset>
@@ -53,10 +54,10 @@
 
 			<input value="" placeholder="Phone" class="textbox" type="text" name="phoneTXT" id="phone_id" oninput="" style="width:100%; height:50px" required/>
 			<input value="" placeholder="Fax" class="textbox" type="text" name="faxTXT" id="twitter_id" oninput="" style="width:100%; height:50px" required/>
-			<textarea value="" placeholder="Address" class="textbox" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px" required/></textarea>
+			<textarea value="" placeholder="Address" class="addresstextarea" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px"/></textarea>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
 			<input type="submit" name="submit" class="submit action-button" value="Submit" />
-		</fieldset>
+		</fieldset> 
 	</form>
         <script>
             $("input[value=\'\']").addClass(\'empty\');

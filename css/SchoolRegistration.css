@@ -58,7 +58,7 @@ input:required:invalid, textarea:required:invalid { /* when a field is considere
 }
 
 
-input:focus, textarea:focus {
+text:focus, textarea:focus {
     background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
     
     border: 1px solid #c4c4c4; 
