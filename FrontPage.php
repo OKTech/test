@@ -70,7 +70,7 @@
     <br style="clear: left;" />
     </div><br style="clear: left;" />
     <script>
-    $("input[value=\'\']").addClass(\'empty\');
+    $(".textbox[value=\'\']").addClass(\'empty\');
             $(\'input\').keyup(function(){
                 if( $(this).val() === ""){
                     $(this).addClass("empty");
