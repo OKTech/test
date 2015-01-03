@@ -14,22 +14,35 @@ class UserModel
 	
 	$this->PerformQuery($query);
     }
+	function LoginUser($user)
+	{
+		return SelectUser($user);
+	}
+	function SelectUser($user)
+	{
+		require 'Models/Credentials_Copy.php';
+		$connection=mysqli_connect($host,$username,$password,$database) or die (mysqli_error());
+		$query  = 'select * from usertab';
+		$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+		while($row= mysqli_fetch_array($result))
+		{
+			session.start();
+			// 3awzeen ne7ot el first name wel last name fel session
+			return 1;
+		}
+		return 0;
+	}
 	function UpdateUser(UserEntity $user)
 	{
 		$query='update usertab set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';
 		$this->PerformQueryUpdate($query);
-	}
-	function LoginUser(UserEntity $user)
-	{
-		if(SelectUser($user) == true)
-			return true;
 	}
 	function PerformQueryUpdate($query)
     {
 		require 'Models/Credentials_Copy.php';
 		$connection = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
 		//mysqli_select_db();
-		echo $query;
+		//echo $query;
 		mysqli_query($connection, $query) or die(mysqli_error($connection));
 		mysqli_close();
     }

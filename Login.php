@@ -3,6 +3,7 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
+	$header = "";
     $title = "User sign in";
     $content_title = "";
     $content = 

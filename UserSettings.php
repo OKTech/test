@@ -10,7 +10,7 @@
 '
 <form  id="form1" name="form_name" action="UpdateProfile.php" method="post">
 <div align="Center">
-<input value="" placeholder="First Name" class="textbox" type="text" name="firstnameTXT" id="firstnameTXT" oninput="checkNameValidity(\'firstnameTXT\', \'First Name\')" style="width:43%;" required/></br>
+<input value="" placeholder="First Name" class="textbox" type="text" name="firstnameTXT" id="firstnameTXT" oninput="checkNameValidity(\'firstnameTXT\', \'First Name\')" style="width:43%;" required/>
 <input value="" placeholder="Last Name" class="textbox" type="text" name="lastnameTXT" id="lastnameTXT" oninput="checkNameValidity(\'lastnameTXT\', \'Last Name\')" style="width:43%;" required/></br>
 <input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="emailTXT" oninput="checkEmailValidity(\'emailTXT\')" required /></br>
 <input value="" type="password" placeholder="Old Password" class="textbox" type="text" id="id_passwordTXT" name="passwordTXT" required/></br>
