@@ -4,7 +4,7 @@
 
     require './Controllers/UserController.php';
     $userController = new UserController();
-    
+    $header = "";
     $title = "School Registration";
     $content_title = "";
     $content = '
