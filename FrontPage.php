@@ -3,7 +3,7 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
-    $title = "Home Page";
+    $title = "Welcome";
     $content_title = "";
     $content = 
 '
@@ -25,7 +25,7 @@
 		<h3 style="color:#636363; font-size:20px; ">[1] Apply for your school.</h3>
 		<h3 style="color:#636363; font-size:20px; ">[2] Get verified.</h3>
 		<h3 style="color:#636363; font-size:20px; ">[3] Pay for your order.</h3>
-		<h3 style="color:#636363; font-size:20px; ">[4] Enjoy Kamello\'s premium features!</h3>
+		<h3 style="color:#636363; font-size:20px; ">[4] Enjoy our premium features!</h3>
 		
 		<div style="padding-top:13px;"><p>Notice that this process must be done by school owner or director as it will need school verification and payements for premium accounts.</p></div>
 		
@@ -79,11 +79,9 @@
                 }
             });
     </script>
-    <script src="js/FrontPageValidation.js" type="text/javascript"></script>
+    <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
 
     ';
-    
-    
     
     include 'Template/FrontPageTemplate.html';
 ?>
