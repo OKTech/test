@@ -32,5 +32,14 @@ class UserController {
 		$userModel = new UserModel();
 		$userModel->UpdateUser($user);
 	}
+	function LoginUser()
+	{
+		$email=$_POST['useremailTXT'];
+		$password=$_POST['passwordTXT'];
+		
+		$user = new UserEntity(-1,"","",$email,$password,"","","","");
+		$userModel = new UserModel();
+		$userModel->LoginUser($user);
+	}
 }
 ?>

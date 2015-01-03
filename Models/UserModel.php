@@ -19,6 +19,11 @@ class UserModel
 		$query='update usertab set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';
 		$this->PerformQueryUpdate($query);
 	}
+	function LoginUser(UserEntity $user)
+	{
+		if(SelectUser($user) == true)
+			return true;
+	}
 	function PerformQueryUpdate($query)
     {
 		require 'Models/Credentials_Copy.php';
