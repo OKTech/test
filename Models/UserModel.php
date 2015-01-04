@@ -10,14 +10,14 @@ class UserModel
 		(firstname, lastname, email, password, birthday, birthmonth, birthyear, gender)
 		VALUES
 		('%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d')
-		", mysqli_real_escape_string($user->firstname), mysqli_real_escape_string($user->lastname), mysqli_real_escape_string($user->email), mysqli_real_escape_string($user->password), mysqli_real_escape_string($user->birthday), mysqli_real_escape_string($user->birthmonth), mysqli_real_escape_string($user->birthyear), mysqli_real_escape_string($user->gender));
+		", $user->firstname, $user->lastname, $user->email, $user->password, $user->birthday, $user->birthmonth, $user->birthyear, $user->gender);
 	
 	$this->PerformQuery($query);
     }
 	function SelectUser($user)
 	{
 		require 'Models/Credentials_Copy.php';
-		$connection=mysqli_connect($host,$username,$password,$database) or die (mysqli_error());
+		$connection=mysqli_connect($host,$username,$password, $database) or die (mysqli_error());
 		$query  = 'select * from usertab';
 		$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 		while($row= mysqli_fetch_array($result))
@@ -48,7 +48,7 @@ class UserModel
 	function PerformQueryUpdate($query)
     {
 		require 'Models/Credentials_Copy.php';
-		$connection = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
+		$connection = mysqli_connect($host, $username, $password, $database) or die(mysqli_error($connection));
 		//mysqli_select_db();
 		//echo $query;
 		mysqli_query($connection, $query) or die(mysqli_error($connection));
@@ -57,11 +57,10 @@ class UserModel
     function PerformQuery($query)
     {
 		require 'Models/Credentials.php';
-		mysqli_connect($host, $username, $password) or die(mysqli_error());
-		mysqli_select_db($database);
+		$connection  = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
 		
-		mysqli_query($query) or die(mysqli_error());
-		mysqli_close();
+		mysqli_query($connection, $query) or die(mysqli_error($connection));
+		mysqli_close($connection);
     }
 }
 

@@ -2,11 +2,12 @@
 
     require './Controllers/UserController.php';
     $userController = new UserController();
-
+    
+    $header = "";
     $title = "Home Page";
     $content_title = "Registration Completed Successfully!";
     
-    $content = "Just blank for now.";
+    $content = "We have sent you an email to verify your account. Please check your email inbox, and maybe the spam box too.";
     
     $EMPTY = 1;
     $WRONG = 2;
@@ -38,10 +39,11 @@
     }
     else
     {
-	header("Location: Home.php");
+	echo("<script type='text/javascript'> alert('Invalid data! It seems you are trying to hack our javascript validation, and we got you! Hehehehe'); </script>");
+	//header("Location: FrontPage.php");
     }
 	
-    include 'Template/Template.php';
+    include 'Template/MainTemplate.html';
     
     
     
