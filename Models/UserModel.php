@@ -12,13 +12,11 @@ class UserModel
 		('%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d')
 		", $user->firstname, $user->lastname, $user->email, $user->password, $user->birthday, $user->birthmonth, $user->birthyear, $user->gender);
 	
-	$this->PerformQuery($query);
+	;
     }
     function isExist($email,$password){
-        require 'Models/Credentials_Copy.php';
-        $connection=mysqli_connect($host,$username,$password, $database) or die (mysqli_error());
         $query  = 'select * from user';
-        $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+        $result = $this->PerformQuery($query);
         while($row= mysqli_fetch_assoc($result)) {
             if ($row['email'] == $email && $row['password'] == $password) return true;
         }
@@ -27,41 +25,26 @@ class UserModel
 
     function SelectUser($email)
     {
-            require 'Models/Credentials_Copy.php';
-            $connection=mysqli_connect($host,$username,$password, $database) or die (mysqli_error());
-            $query  = 'select * from user';
-            $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+            $query  = 'select * from user where email="'.$email.'";';
+            $result = $this->PerformQuery($query);
             while($row= mysqli_fetch_array($result))
             {
-
-                    /*echo $myrow["firstname"];
-                    echo "</br>";
-                    echo $myrow["lastname"];
-                    echo "</br>";
-                    echo $myrow["email"];
-                    echo "</br>";
-                    echo $myrow["password"];*/
                     session.start();
-                    // 3awzeen ne7ot el first name wel last name fel session
+		    $_SESSION['user_id'] = $row['id'];
+		    $_SESSION['user_firstname'] = $row['firstname'];
+		    $_SESSION['user_lastname'] = $row['lastname'];
+		    $_SESSION['user_email'] = $row['email'];
+		    $_SESSION['user_gender'] = $row['gender'];
+		    $_SESSION['user_birthday'] = $row['birthday'];
+		    $_SESSION['user_birthday'] = $row['birthmonth'];
+		    $_SESSION['user_birthday'] = $row['birthyear'];
                     return 1;
             }
             return 0;
     }
-    function LoginUser($user){
-            return SelectUser($user);
-    }
-
     function UpdateUser(UserEntity $user){
-            $query='update usertab set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';
-            $this->PerformQueryUpdate($query);
-    }
-    function PerformQueryUpdate($query){
-		require 'Models/Credentials_Copy.php';
-		$connection = mysqli_connect($host, $username, $password, $database) or die(mysqli_error($connection));
-		//mysqli_select_db();
-		//echo $query;
-		mysqli_query($connection, $query) or die(mysqli_error($connection));
-		mysqli_close();
+            $query='update user set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';
+            $this->PerformQuery($query);
     }
     function PerformQuery($query){
 		require 'Models/Credentials.php';
