@@ -2,10 +2,10 @@
 <?php
         require './Controllers/SchoolController.php';
         
-        $username=0;$password=0;$schoolname=0;$twitter=0;$facebook=0;$google=0;$phone=0;$fax=0;$address=0;$country=0;$grade=0;$photo=0;
+        $email=0;$password=0;$schoolname=0;$twitter=0;$facebook=0;$google=0;$phone=0;$fax=0;$address=0;$country=0;$grade=0;$photo=0;
 	
-        if (isset($_POST["usernameTXT"]))
-            $username = $_POST["usernameTXT"];
+        if (isset($_POST["emailTXT"]))
+            $email = $_POST["usernameTXT"];
         if (isset($_POST["passwordTXT"]))
             $password =  $_POST["passwordTXT"];
         if (isset($_POST["schoolnameTXT"]))
@@ -28,10 +28,18 @@
             $grade = $_POST["grade"];
         if (isset($_POST["upload"]))
             $photo = $_POST["upload"];
-        validateAll($username,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo);
+        validateAll($email,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo);
+        checkUserAvailability($email);
+        
+        function checkUserAvailability($email){
+            require ("Models/UserModel.php");
+            $userModel = new UserModel();
+            if($userModel->isExist($email)) return true;
+            return false;
+        }
         
         function validateAll($username,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo){
-            $res1 = validateUsername($username);
+            $res1 = validateEmail($email);
             $res2 = validatePassword($password);
             $res3 = validateCountry($country);
             $res4 = validateGrade($grade);
@@ -52,17 +60,9 @@
  
         }
         
-        function validateUsername ($username){
+        function validateEmail ($email){
             
-            $len = strlen($username);
-            if ($len == 0) return false;
             
-            for ($i=0; $i< $len ; $i++){
-                if(!ctype_alpha ( $username[$i] ) && !($username[$i] == '_') && !($username[$i] >= '1' && $username[$i] <= '9')){
-                    return false;
-                }
-            }
-            echo "Username true\n";
             return true;
         }
         
