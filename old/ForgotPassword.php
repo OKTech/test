@@ -1,11 +1,12 @@
 <?php
 
+$header = "";
 $title = "Forgot Password";
+$content_title = "Forgot Password";
 $content = "
 <form action='' method='post' class='registrationForm'>
     
-	To restore your password, do one of the following:
-	<br/><br/>
+<pre></pre>
 	<fieldset class='registrationTable'>
 	    Enter your email address and we will send you an automatic email with instructions to restore your password.<br/><br/>
 	    <label style='width:100px' for='email'>Email: </label>
@@ -21,5 +22,5 @@ $content = "
 	</fieldset>
 </form>
 	    ";
-include 'Template.php';
+include 'Template/MainTemplate.html';
 ?>

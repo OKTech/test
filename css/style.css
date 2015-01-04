@@ -229,14 +229,34 @@
     position:relative;
 }
 
-.tooWeak{
+.tooWeakPassword{
     background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center;
     border: 1px solid #b03535; 
     box-shadow: 0px 0px 8px #b03535;
     -moz-box-shadow: 0px 0px 8px #b03535;
     -webkit-box-shadow: 0px 0px 8px #b03535; 
 }
-
+.weakPassword{
+    background: #fff url(./css/images/password-weak.png) no-repeat 98% center; 
+    border: 1px solid #b03535;  
+    box-shadow: 0px 0px 8px #b03535;  
+    -moz-box-shadow: 0px 0px 8px #b03535; 
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+.moderatePassword{
+    background: #fff url(./css/images/password-moderate.png) no-repeat 98% center; 
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f;  
+    -webkit-box-shadow: 0px 0px 8px #28921f;
+}
+.strongPassword{
+    background: #fff url(./css/images/password-strong.png) no-repeat 98% center; 
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f;  
+    -webkit-box-shadow: 0px 0px 8px #28921f;
+}
 
 /* ===================== TEST ==================== */
 

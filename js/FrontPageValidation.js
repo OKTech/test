@@ -1,37 +1,70 @@
 
-function addClass(element, classToAdd) {
-    var currentClassValue = element.className;
-      
-    if (currentClassValue.indexOf(classToAdd) == -1) {
-        if ((currentClassValue == null) || (currentClassValue === "")) {
-            element.className = classToAdd;
-        } else {
-            element.className += " " + classToAdd;
+var flag = new Array(10);
+
+function checkPasswordStrength(txt)
+{
+    var x = document.getElementById(txt);
+    alert(x.className);
+    var strength = 0;
+
+    if(/[A-Z]/.test(x.value))strength++;
+    if(/[a-z]/.test(x.value))strength++;
+    if(/[0-9]/.test(x.value))strength++;
+    if(/[+_)(*&^%$#@!~}{'";:?><.,]/.test(x.value))strength++;
+
+    if(strength == 0)
+    {
+        x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );
+        x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
+        x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
+        x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
+        x.setCustomValidity('It cannot bempty!');
+        return False(3);
+    }
+    else if(strength <= 2)
+    {
+        if(strength == 1)
+        {
+            x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
+            x.className += " tooWeakPassword";
         }
-    }
-}
- 
-function removeClass(element, classToRemove) {
-    var currentClassValue = element.className;
- 
-    if (currentClassValue == classToRemove) {
-        element.className = "";
-        return;
-    }
- 
-    var classValues = currentClassValue.split(" ");
-    var filteredList = [];
- 
-    for (var i = 0 ; i < classValues.length; i++) {
-        if (classToRemove != classValues[i]) {
-            filteredList.push(classValues[i]);
+        if(strength == 2)
+        {
+            x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
+            x.className += " weakPassword";
         }
+        x.setCustomValidity('Email format is incorrect.');
+        return False(3);
     }
- 
-    element.className = filteredList.join(" ");
+    else
+    {
+        if(strength == 3)
+        {
+            x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
+            x.className += " moderatePassword";
+        }
+        if(strength == 4)
+        {
+            x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
+            x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
+            x.className += " strongPassword";
+        }
+        x.setCustomValidity('');
+        return True(3);
+    }
 }
 
-var flag = new Array(10);
 function False(ind)
 {
     flag[ind] = false;
@@ -81,50 +114,7 @@ function checkEmailValidity(txt)
     //document.getElementById(err).style.color = 'red';
     return False(2);
 }
-function checkPasswordStrength(txt)
-{
-    var x = document.getElementById(txt);
-    var strength = 0;
-    
-    if(/[A-Z]/.test(document.getElementById(txt).value))strength++;
-    if(/[a-z]/.test(document.getElementById(txt).value))strength++;
-    if(/[0-9]/.test(document.getElementById(txt).value))strength++;
-    if(/[+_)(*&^%$#@!~}{'";:?><.,]/.test(document.getElementById(txt).value))strength++;
 
-    if(strength == 0)
-    {
-        //x.style.cssText = "background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center; border: 1px solid #b03535;  box-shadow: 0px 0px 8px #b03535;  -moz-box-shadow: 0px 0px 8px #b03535; -webkit-box-shadow: 0px 0px 8px #b03535; ";
-        //document.getElementById("strengthLBL").innerHTML = "Please enter a password.";
-        //document.getElementById("strengthLBL").style.color = 'red';
-        //document.getElementById("strengthLBL").innerHTML = "Please enter a password.";
-        //document.getElementById("strengthLBL").style.color = 'red';
-        x.setCustomValidity('It cannot bempty!');
-        return False(3);
-    }
-    else if(strength <= 2)
-    {
-        //document.getElementById("strengthLBL").innerHTML = "Not valid - Password Strength: " + ret[strength-1] + "  ** Make it stronger.";
-        //document.getElementById("strengthLBL").style.color = 'red';
-        if(strength == 1) //x.classList.add('tooWeak');//addClass(x, 'tooWeak');//
-            x.style.cssText = "background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center;border: 1px solid #b03535; box-shadow: 0px 0px 8px #b03535; -moz-box-shadow: 0px 0px 8px #b03535; -webkit-box-shadow: 0px 0px 8px #b03535; ";
-        if(strength == 2) x.style.cssText = "background: #fff url(./css/images/password-weak.png) no-repeat 98% center; border: 1px solid #b03535;  box-shadow: 0px 0px 8px #b03535;  -moz-box-shadow: 0px 0px 8px #b03535; -webkit-box-shadow: 0px 0px 8px #b03535; ";
-        //document.getElementById("strengthLBL").innerHTML = "Not valid - Password Strength: " + ret[strength-1] + "  ** Make it stronger.";
-        //document.getElementById("strengthLBL").style.color = 'red';
-        x.setCustomValidity('Email format is incorrect.');
-        return False(3);
-    }
-    else
-    {
-        //document.getElementById("strengthLBL").innerHTML = "Valid - Password Strength: " + ret[strength-1];
-        //document.getElementById("strengthLBL").style.color = 'green';
-        if(strength == 3) x.style.cssText = "background: #fff url(./css/images/password-moderate.png) no-repeat 98% center; border: 1px solid #28921f; box-shadow: 0px 0px 8px #28921f; -moz-box-shadow: 0px 0px 8px #28921f;  -webkit-box-shadow: 0px 0px 8px #28921f;"; 
-        if(strength == 4) x.style.cssText = "background: #fff url(./css/images/password-strong.png) no-repeat 98% center; border: 1px solid #28921f; box-shadow: 0px 0px 8px #28921f; -moz-box-shadow: 0px 0px 8px #28921f;  -webkit-box-shadow: 0px 0px 8px #28921f;"; 
-        //document.getElementById("strengthLBL").innerHTML = "Valid - Password Strength: " + ret[strength-1];
-        //document.getElementById("strengthLBL").style.color = 'green';
-        x.setCustomValidity('');
-        return True(3);
-    }
-}
 function checkMatch(txt, txt2)
 {
     var x = document.getElementById(txt);

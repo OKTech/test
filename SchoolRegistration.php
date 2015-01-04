@@ -57,6 +57,7 @@
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
 			<input type="submit" name="submit" class="action-button" value="Submit" id="submit_id" />
 		</fieldset> 
+                </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 	</form>
         <script src="js/School Registration.js" type="text/javascript"></script>
         <script>
