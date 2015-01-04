@@ -36,11 +36,12 @@
     if($firstname_flag == $OK && $lastname_flag == $OK && $email_flag == $OK && $password_flag == $OK && $birthday_flag == $OK && $birthmonth_flag == $OK && $birthyear_flag == $OK && $gender_flag == $OK)
     {
 	$userController->InsertUser();
+	//header("Location: RegistrationComplete.php");
     }
     else
     {
-	echo("<script type='text/javascript'> alert('Invalid data! It seems you are trying to hack our javascript validation, and we got you! Hehehehe'); </script>");
-	//header("Location: FrontPage.php");
+	//echo("<script type='text/javascript'> alert('Invalid data! It seems you are trying to hack our javascript validation, and we got you! Hehehehe'); </script>");
+	header("Location: FrontPage.php");
     }
 	
     include 'Template/MainTemplate.html';
