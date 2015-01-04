@@ -62,6 +62,9 @@
         <script src="js/progressbar.js" type="text/javascript"></script>
     
         <div style="clear:left;"></div>
+        <script>
+            var LINK = "sinupLI";
+        </script>
 ';
     
     

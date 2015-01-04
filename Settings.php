@@ -20,6 +20,7 @@
 
 </form>
 		<script>
+                    var LINK = "userLI";
                     $(".textbox[value=\'\']").addClass(\'empty\');
                             $(\'input\').keyup(function(){
                                 if( $(this).val() === ""){

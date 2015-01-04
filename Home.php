@@ -3,7 +3,11 @@
 $header = "";
 $title = "Home";
 $content_title = "Welcome to Home!";
-$content = "";
+$content = "
+    <script>
+        var LINK = 'homeLI';
+    </script>
+";
 
 
 include 'Template/MainTemplate.html';

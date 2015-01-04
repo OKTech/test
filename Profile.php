@@ -84,6 +84,10 @@
 	</div>
 	
 	<link rel="stylesheet" href="css/Profile/style.css" type="text/css"/>
+        
+        <script>
+            var LINK = "proLI";
+        </script>
     ';
 		 
     include 'Template/MainTemplate.html';

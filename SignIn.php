@@ -17,6 +17,7 @@
 <div align="center"><input value="Sign In" type="submit" name="login" class="button" id="login"/></div>
 </form></pre>
 		<script>
+                    var LINK = "sininLI";
                     $(".textbox[value=\'\']").addClass(\'empty\');
                             $(\'input\').keyup(function(){
                                 if( $(this).val() === ""){

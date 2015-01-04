@@ -81,7 +81,9 @@
 	    <br style="clear: left;" />
 	</div><br style="clear: left;" />
 
-	
+	<script>
+            var LINK = "regLI";
+        </script>
 
 
 ';
