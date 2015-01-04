@@ -2,15 +2,14 @@
 <?php
 
 
-    require './Controllers/UserController.php';
-    $userController = new UserController();
+    require './Controllers/SchoolController.php';
+    $SchoolController = new SchoolController();
     $header = "";
     $title = "School Registration";
     $content_title = "";
     $content = '
 	<div style="float:center;">
 		
-	<link rel="stylesheet" href="css/progressbar.css" type="text/css" media="all" />
 		
 	<!-- multistep form -->
 	<form id="msform" action="SchoolRegistrationValidation.php" method="POST" noValidation>
@@ -72,9 +71,9 @@
         </script>
 	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery.easing.min.js" type="text/javascript"></script>
-	<script src="js/progressbar.js" type="text/javascript"></script>
         <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
-	
+        <script src="js/School Registration.js" type="text/javascript"></script>
+        
         <link rel="stylesheet" href="css/SchoolRegistration.css" type="text/css"/>
 		
 	    <br style="clear: left;" />
