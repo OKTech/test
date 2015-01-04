@@ -100,8 +100,7 @@ textarea { overflow: auto; }
 .main section { background: url(images/section-shadow.png) no-repeat 0 bottom; padding-top: 40px; padding-bottom: 23px;  }
 .main section:last-of-type { background: transparent; }
 
-.main .testimonial { text-align: center; padding-right: 88px; padding-left: 88px; }
-.main .testimonial p { padding-bottom: 10px; }
+.main .testimonial { text-align: center; padding-right: 88px; padding-left: 88px; margin-bottom: 50px;}
 .main .testimonial p strong { font-size: 28px; font-family: georgia, serif; position: relative; top: 10px; left: -5px; }
 //.main .testimonial table {width: 100;}
 
