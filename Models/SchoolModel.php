@@ -5,11 +5,11 @@
     class SchoolModel {
         
         function InsertSchool(SchoolEntity $school){
-            $query = sprintf("INSERT INTO scoolsTBL
-		(id, userid, schoolname, country, grade, facebook, twitter, google, phone, fax, address)
+            $query = sprintf("INSERT INTO school
+		(user_id, name, country, grade, facebook, twitter, google, phone, fax, address)
 		VALUES
-		('%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d')
-		", -1, $school->user_id, $school->schoolname, $school->country, $school->grade, $school->facebook, $school->twitter, $school->google, $school->phone, $school->fax, $school->address);
+		('%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+		",1 , $school->schoolname, $school->country, $school->grade, $school->facebook, $school->twitter, $school->google, $school->phone, $school->fax, $school->address);
 	
             $this->PerformQuery($query);
         }

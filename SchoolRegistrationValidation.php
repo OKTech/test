@@ -36,18 +36,18 @@
             $res3 = validateCountry($country);
             $res4 = validateGrade($grade);
             $res5 = validateSchoolName($schoolName);
-            $res6 = validateSchoolName($twitter);
-            $res7 = validateSchoolName($facebook);
-            $res8 = validateSchoolName($google);
+            //$res6 = validateSchoolName($twitter);
+            //$res7 = validateSchoolName($facebook);
+            //$res8 = validateSchoolName($google);
             $res9 = validatePhone($phone);
             $res10 = validatePhone($fax);
             $res11 = validatePhoto($photo);
-            if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res6 || !$res7 || !$res8 || !$res9 || !$res10 || !$res11){   
+            if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res9 || !$res10 || !$res11){   
                 header("Location: SchoolRegistration.php");   
             } else {
                 $schoolController = new SchoolController();
                 $schoolController->InsertSchool();
-                header("Location: Home.php");
+                header("Location: SchoolRegistrationComplete.php");
             }
  
         }

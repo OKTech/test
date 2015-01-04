@@ -1,7 +1,7 @@
 
 <?php
 
-
+    
     require './Controllers/SchoolController.php';
     $SchoolController = new SchoolController();
     $header = "";
@@ -59,7 +59,7 @@
 		</fieldset> 
                 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 	</form>
-        <script src="js/School Registration.js" type="text/javascript"></script>
+        
         <script>
             $("input[value=\'\']").addClass(\'empty\');
             $(\'input\').keyup(function(){
