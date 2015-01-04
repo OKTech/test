@@ -5,7 +5,7 @@
         $email=0;$password=0;$schoolname=0;$twitter=0;$facebook=0;$google=0;$phone=0;$fax=0;$address=0;$country=0;$grade=0;$photo=0;
 	
         if (isset($_POST["emailTXT"]))
-            $email = $_POST["usernameTXT"];
+            $email = $_POST["emailTXT"];
         if (isset($_POST["passwordTXT"]))
             $password =  $_POST["passwordTXT"];
         if (isset($_POST["schoolnameTXT"]))
@@ -29,16 +29,15 @@
         if (isset($_POST["upload"]))
             $photo = $_POST["upload"];
         validateAll($email,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo);
-        checkUserAvailability($email);
         
-        function checkUserAvailability($email){
+        function checkUserAvailability($email,$password){
             require ("Models/UserModel.php");
             $userModel = new UserModel();
-            if($userModel->isExist($email)) return true;
+            if($userModel->isExist($email,$password)) return true;
             return false;
         }
         
-        function validateAll($username,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo){
+        function validateAll($email,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo){
             $res1 = validateEmail($email);
             $res2 = validatePassword($password);
             $res3 = validateCountry($country);
@@ -50,6 +49,9 @@
             $res9 = validatePhone($phone);
             $res10 = validatePhone($fax);
             $res11 = validatePhoto($photo);
+            if (!checkUserAvailability($email,$password)){
+                 header("Location: SchoolRegistration.php"); 
+            }
             if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res9 || !$res10 || !$res11){   
                 header("Location: SchoolRegistration.php");   
             } else {

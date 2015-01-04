@@ -6,7 +6,7 @@ class SchoolController {
     
     function InsertSchool()
     {
-        $username = $_POST["usernameTXT"];
+        $email = $_POST["emailTXT"];
         $password =  $_POST["passwordTXT"];
 	$schoolName = $_POST["schoolnameTXT"];
 	$twitter = $_POST["twitterTXT"];
@@ -19,7 +19,7 @@ class SchoolController {
         $grade = $_POST["grade"];
         $user_id = $_SESSION['user_id'];
 	
-	$school = new SchoolEntity (-1,$user_id, $username, $schoolName, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address);
+	$school = new SchoolEntity (-1,$user_id, $email, $schoolName, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address);
 	
 	$schoolModel = new SchoolModel();
 	$schoolModel->InsertSchool($school);

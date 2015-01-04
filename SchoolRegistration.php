@@ -22,7 +22,7 @@
 		<!-- fieldsets -->
 		<fieldset>
                         <h3 class="fs-subtitle">Personal Identification</h3>
-			<input value="" placeholder="Username" class="textbox" type="text" name="usernameTXT" id="username_id" oninput="checkNameValidity(\'username_id\', \'username\')" style="width:90%; height:50px"/>
+			<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="username_id" style="width:90%; height:50px"/>
 			<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" style="width:90%; height:50px">
 			<input type="button" name="next" class="next action-button" value="Next" id="fnext_id" style="height:40px" />
 		</fieldset>

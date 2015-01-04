@@ -14,13 +14,13 @@ class UserModel
 	
 	$this->PerformQuery($query);
     }
-    function isExist($email){
+    function isExist($email,$password){
         require 'Models/Credentials_Copy.php';
         $connection=mysqli_connect($host,$username,$password, $database) or die (mysqli_error());
         $query  = 'select * from user';
         $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-        while($row= mysqli_fetch_array($result)) {
-            if ($row['email'] == $email) return true;
+        while($row= mysqli_fetch_assoc($result)) {
+            if ($row['email'] == $email && $row['password'] == $password) return true;
         }
         return false;
     }
