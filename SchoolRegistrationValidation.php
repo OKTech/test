@@ -28,13 +28,14 @@
             $grade = $_POST["grade"];
         if (isset($_POST["upload"]))
             $photo = $_POST["upload"];
+        
         validateAll($email,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo);
         
         function checkUserAvailability($email,$password){
             require ("Models/UserModel.php");
             $userModel = new UserModel();
-            if($userModel->isExist($email,$password)) return true;
-            return false;
+            if($userModel->isExist($email,$password) == false) return false;
+            return true;
         }
         
         function validateAll($email,$password,$schoolName,$twitter,$facebook,$google,$phone,$fax,$address,$country,$grade,$photo){
@@ -43,22 +44,23 @@
             $res3 = validateCountry($country);
             $res4 = validateGrade($grade);
             $res5 = validateSchoolName($schoolName);
-            //$res6 = validateSchoolName($twitter);
-            //$res7 = validateSchoolName($facebook);
-            //$res8 = validateSchoolName($google);
-            $res9 = validatePhone($phone);
-            $res10 = validatePhone($fax);
-            $res11 = validatePhoto($photo);
+            $res6 = validatePhone($phone);
+            $res7 = validatePhone($fax);
+            $res8 = validatePhoto($photo);
             if (!checkUserAvailability($email,$password)){
-                 header("Location: SchoolRegistration.php"); 
+                echo '<script type="text/javascript">alert("ERROR IN DATABASE");</script>';
+                //header("Location: SchoolRegistration.php"); 
+                return;
             }
-            if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res9 || !$res10 || !$res11){   
-                header("Location: SchoolRegistration.php");   
+            if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res6 || !$res7 || !$res8){
+                echo '<script type="text/javascript">alert("ERROR IN VALIDATION");</script>';
+                //header("Location: SchoolRegistration.php");   
             } else {
                 $schoolController = new SchoolController();
                 $schoolController->InsertSchool();
                 header("Location: SchoolRegistrationComplete.php");
             }
+            
  
         }
         

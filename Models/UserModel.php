@@ -17,9 +17,15 @@ class UserModel
     function isExist($email,$password){
         $query  = 'select * from user';
         $result = $this->PerformQuery($query);
-        while($row= mysqli_fetch_assoc($result)) {
-            if ($row['email'] == $email && $row['password'] == $password) return true;
+        while($row= mysqli_fetch_array($result)) {
+            echo '<script type="text/javascript">alert("' .$row["email"]. '")</script>';
+            echo '<script type="text/javascript">alert("")</script>';
+            if ($row['email'] == $email && $row['password'] == $password){               
+                echo '<script type="text/javascript">alert("FOUND");</script>';
+                return true;
+            }
         }
+        echo '<script type="text/javascript">alert("NOT FOUND");</script>';
         return false;
     }
 
