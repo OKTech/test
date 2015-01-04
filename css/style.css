@@ -64,14 +64,14 @@
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
 
-.radio {
+.radioGroup {
     
     float: left;
     font-size: 15px; 
     font-weight: bold;
     color: #666;
-    margin: 4px 4px 4px 4px;
-    padding: 9px 15px 9px 15px;
+    margin: 4px 4px 4px 0px;
+    padding: 9px 15px 9px 0px;
     
     border-radius: 4px; 
     -moz-border-radius: 4px; 
@@ -237,42 +237,52 @@
     -webkit-box-shadow: 0px 0px 8px #b03535; 
 }
 
-/* ======================  TRASH  ============================ */
 
-.register_school_button {
-    font-size: 23px;
-    font-family:Arial;
-    font-weight:normal;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: 2px solid #3866a3;
-    padding: 7px 25px;
-    text-shadow:1px 1px 0px #7cacde;
-    -moz-box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    -webkit-box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    font-weight:bold;
-    text-decoration:none;
-    cursor: pointer;
-    background:-webkit-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:-moz-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:-ms-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:linear-gradient(180deg, #63b8ee 5%, #468ccf 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
-    /*background-color:#468ccf;*/
-    color:#FFFFFF;
-    display:inline-block;
+/* ===================== TEST ==================== */
+
+input[type=radio] {
+  visibility: hidden;
 }
-.register_school_button:hover {
-    background:-webkit-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:-moz-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:-ms-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:linear-gradient(180deg, #468ccf 5%, #63b8ee 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
-    /*background-color:#63b8ee;*/
+label.radio {
+  cursor: pointer;
+  text-indent: 25px;
+  overflow: visible;
+  display: inline-block;
+  position: relative;
+  //margin-bottom: 15px;
 }
-.register_school_button:active {
-    position:relative;
-    top:1px;
+
+label.radio:before {
+  background: #468ccf;
+  content:'';
+  position: absolute;
+  top:2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+label.radio:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 0.5em;
+	height: 0.25em;
+	background: transparent;
+	top: 7.5px;
+	left: 4.5px;
+	border: 3px solid #ffffff;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+input[type=radio]:checked + label:after {
+	opacity: 1;
 }
