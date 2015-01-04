@@ -30,10 +30,10 @@
                         <h3 class="fs-subtitle">School Information</h3>
 			
                         <div>
-                            <select name="country" id="day" class="mydrop" style="width:48%; float:left;">
+                            <select name="country" id="day" class="dropdown" style="width:48%; float:left;">
                                     <option>Country</option>
                             </select> 
-                            <select name="grade" id="month" class="mydrop" style="width:48%; float:left;">
+                            <select name="grade" id="month" class="dropdown" style="width:48%; float:left;">
                                     <option>Grade</option>
                             </select> 
                         </div>
@@ -75,6 +75,7 @@
         <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
         <script src="js/School Registration.js" type="text/javascript"></script>
         
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
         <link rel="stylesheet" href="css/SchoolRegistration.css" type="text/css"/>
 		
 	    <br style="clear: left;" />
