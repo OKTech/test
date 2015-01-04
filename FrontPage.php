@@ -78,16 +78,18 @@
 	</div>
     <br style="clear: left;" />
     </div><br style="clear: left;" />
-    <script>
-    $(".textbox[value=\'\']").addClass(\'empty\');
-            $(\'input\').keyup(function(){
-                if( $(this).val() === ""){
-                    $(this).addClass("empty");
-                }else{
-                    $(this).removeClass("empty");
-                }
-            });
-    </script>
+    
+
+	<script>
+                    $(".textbox[value=\'\']").addClass(\'empty\');
+                            $(\'input\').keyup(function(){
+                                if( $(this).val() === ""){
+                                    $(this).addClass("empty");
+                                }else{
+                                    $(this).removeClass("empty");
+                                }
+                            });
+                </script>
     <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
 
     ';

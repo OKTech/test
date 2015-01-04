@@ -15,7 +15,18 @@
 <input value="" placeholder="Useremail" class="textbox" type="text" name="useremailTXT" id="useremailTXT" oninput="checkNameValidity(\'useremailTXT\', \'Useremail\')" style="width:33%;" required/>
 <input value="" type="password" placeholder="Password" class="textbox" type="text" id="passwordTXT" name="passwordTXT" style="width:33%;" required/></div>
 <div align="center"><input value="Sign In" type="submit" name="login" class="button" id="login"/></div>
-</form></pre>';
+</form></pre>
+		<script>
+                    $(".textbox[value=\'\']").addClass(\'empty\');
+                            $(\'input\').keyup(function(){
+                                if( $(this).val() === ""){
+                                    $(this).addClass("empty");
+                                }else{
+                                    $(this).removeClass("empty");
+                                }
+                            });
+                </script>
+';
 
 include 'Template/MainTemplate.html';
 ?>
