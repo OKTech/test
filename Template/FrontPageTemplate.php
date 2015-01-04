@@ -37,7 +37,7 @@
 					<div class="cl">&nbsp;</div>
 				</div>
 				<!-- end of shell -->	
-			</header>";';
+			</header>';
     
     
     include 'Template/MainTemplate.html';
