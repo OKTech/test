@@ -1,6 +1,8 @@
 
 <?php
-        $username=""; $password=""; $schoolname=""; $twitter=""; $facebook=""; $google=""; $phone=""; $fax=""; $address=""; $country=""; $grade=""; $photo="";
+        require './Controllers/SchoolController.php';
+        
+        $username=0;$password=0;$schoolname=0;$twitter=0;$facebook=0;$google=0;$phone=0;$fax=0;$address=0;$country=0;$grade=0;$photo=0;
 	
         if (isset($_POST["usernameTXT"]))
             $username = $_POST["usernameTXT"];
@@ -42,19 +44,11 @@
             $res11 = validatePhoto($photo);
             if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res6 || !$res7 || !$res8 || !$res9 || !$res10 || !$res11){   
                 header("Location: SchoolRegistration.php");   
+            } else {
+                $schoolController = new SchoolController();
+                $schoolController->InsertSchool();
+                header("Location: Home.php");
             }
-            
-            /*echo $res1;
-            echo $res2;
-            echo $res3;
-            echo $res4;
-            echo $res5;
-            echo $res6;
-            echo $res7;
-            echo $res8;
-            echo $res9;
-            echo $res10;
-            echo $res11;*/
  
         }
         

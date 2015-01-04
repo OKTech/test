@@ -2,12 +2,12 @@
 
 class SchoolEntity
 {
-    public $username, $password, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address;
+    public $username, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address, $user_id, $id;
     
-    public function __construct($id, $username, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address)
+    public function __construct($id, $user_id, $username, $schoolname, $country, $grade, $facebook, $twitter, $google, $phone, $fax, $address)
     {
+        $this->id = $id;
 	$this->username = $username;
-	$this->password = $password;
 	$this->schoolname = $schoolname;
 	$this->country = $country;
 	$this->grade = $grade;
@@ -17,6 +17,7 @@ class SchoolEntity
 	$this->phone = $phone;
 	$this->fax = $fax;
 	$this->address = $address;
+        $this->user_id = $user_id;
     }
 }
 
