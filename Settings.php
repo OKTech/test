@@ -8,7 +8,7 @@
     $content_title = "Settings";
     $content = 
 '
-<form  id="form1" name="form_name" action="UpdateProfile.php" method="post">
+<form  id="form1" name="form_name" action="SettingsValidation.php" method="post">
 <div align="Center">
 <input value="" placeholder="First Name" class="textbox" type="text" name="firstnameTXT" id="firstnameTXT" oninput="checkNameValidity(\'firstnameTXT\', \'First Name\')" style="width:43%;" required/>
 <input value="" placeholder="Last Name" class="textbox" type="text" name="lastnameTXT" id="lastnameTXT" oninput="checkNameValidity(\'lastnameTXT\', \'Last Name\')" style="width:43%;" required/></br>

@@ -37,7 +37,7 @@
 	<div style="float:left; border-left:1px solid #e3e3e3; height:500px; width:1%;"></div>
 
 	<div align="left" style="float:left; width:49%; margin-left: 0px;">
-	    <form class = "contact_form" action="RegistrationComplete.php" name="signUpForm" method="POST" noValidate>
+	    <form class = "contact_form" action="SignUpValidation.php" name="signUpForm" method="POST" noValidate>
 	    
 		<h2 align="center" style="font-size: 36px; font-weight: bold;">Sign Up</h2>
 		<h3 align="center" style="color:#636363; font-size:20px;">It\'s for free!</h3>
