@@ -1,17 +1,4 @@
 
-
-
-
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-/*afhaslaskfhaslfhalfkhalkfhalkfhalksfhaslkhfaslkhflakshflaskhflakshflakshflakshflkashflkashflkashflakshfalkshfalkhfahf*/
-
 .textbox {
     
     border: 1px solid #c4c4c4; 
@@ -46,7 +33,7 @@
 } 
 
 
-.birthday_homepage {
+.dropdown {
     
     height: 40px; 
     width: 90px; 
@@ -65,7 +52,7 @@
     
 }
 
-.birthday_homepage:focus {
+.dropdown:focus {
     
     margin: 4px 4px 4px 4px;
     padding: 4px 8px 4px 8px;
@@ -77,7 +64,7 @@
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
 
-.sex_homepage {
+.radio {
     
     float: left;
     font-size: 15px; 
@@ -94,7 +81,7 @@
     -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
 }
 
-.signup_button {
+.button {
     font-size: 23px;
     font-family:Arial;
     font-weight:normal;
@@ -119,7 +106,7 @@
     color:#FFFFFF;
     display:inline-block;
 }
-.signup_button:hover {
+.button:hover {
     background:-webkit-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
     background:-moz-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
     background:-ms-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
@@ -127,58 +114,12 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
     /*background-color:#63b8ee;*/
 }
-.signup_button:active {
+.button:active {
     position:relative;
     top:1px;
 }
-
-.register_school_button {
-    font-size: 23px;
-    font-family:Arial;
-    font-weight:normal;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: 2px solid #3866a3;
-    padding: 7px 25px;
-    text-shadow:1px 1px 0px #7cacde;
-    -moz-box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    -webkit-box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    box-shadow:inset 1px 1px 0px 0px #bee2f9;
-    font-weight:bold;
-    text-decoration:none;
-    cursor: pointer;
-    background:-webkit-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:-moz-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:-ms-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
-    background:linear-gradient(180deg, #63b8ee 5%, #468ccf 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
-    /*background-color:#468ccf;*/
-    color:#FFFFFF;
-    display:inline-block;
-}
-.register_school_button:hover {
-    background:-webkit-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:-moz-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:-ms-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
-    background:linear-gradient(180deg, #468ccf 5%, #63b8ee 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
-    /*background-color:#63b8ee;*/
-}
-.register_school_button:active {
-    position:relative;
-    top:1px;
-}
-
-
-
-
 
 /*============================== FOR VALIDATION ====================================*/
-
-
-
-
 
 .form_hint, .required_notification {font-size: 11px;}
 
@@ -296,3 +237,42 @@
     -webkit-box-shadow: 0px 0px 8px #b03535; 
 }
 
+/* ======================  TRASH  ============================ */
+
+.register_school_button {
+    font-size: 23px;
+    font-family:Arial;
+    font-weight:normal;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #3866a3;
+    padding: 7px 25px;
+    text-shadow:1px 1px 0px #7cacde;
+    -moz-box-shadow:inset 1px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #bee2f9;
+    box-shadow:inset 1px 1px 0px 0px #bee2f9;
+    font-weight:bold;
+    text-decoration:none;
+    cursor: pointer;
+    background:-webkit-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
+    background:-moz-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
+    background:-ms-linear-gradient(90deg, #468ccf 5%, #63b8ee 100%);
+    background:linear-gradient(180deg, #63b8ee 5%, #468ccf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+    /*background-color:#468ccf;*/
+    color:#FFFFFF;
+    display:inline-block;
+}
+.register_school_button:hover {
+    background:-webkit-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
+    background:-moz-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
+    background:-ms-linear-gradient(90deg, #63b8ee 5%, #468ccf 100%);
+    background:linear-gradient(180deg, #468ccf 5%, #63b8ee 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+    /*background-color:#63b8ee;*/
+}
+.register_school_button:active {
+    position:relative;
+    top:1px;
+}

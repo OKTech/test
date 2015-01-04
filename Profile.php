@@ -1,5 +1,5 @@
 <?php
-    
+    $title = "Profile";
     $header = "";
     $content_title = "";
          $content = '<div id="content" class="clearfix">
