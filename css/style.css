@@ -1,5 +1,5 @@
 
-.textbox {
+.textbox, .textarea {
     
     border: 1px solid #c4c4c4; 
     height: 30px; 
@@ -16,7 +16,7 @@
     -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
 } 
  
-.textbox:focus{ 
+.textbox:focus, .textarea:focus{ 
 
     margin: 4px 4px 4px 4px;
     padding: 4px 8px 4px 8px;
@@ -28,7 +28,7 @@
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
 
-.textbox:hover { 
+.textbox:hover, .textarea:hover { 
     background: #FFF9DF; 
 } 
 
@@ -130,11 +130,11 @@
     float:right;
 }
 
-.textbox:required, textarea:required {
+.textbox:required, .textarea:required {
     background: #fff url(icons/asterisk3.png) no-repeat 98% center;
 }
 
-.textbox:required:focus:valid, textarea:required:focus:valid {
+.textbox:required:focus:valid, .textarea:required:focus:valid {
     background: #fff url(icons/valid_small.png) no-repeat 98% center;
     
     border: 1px solid #28921f; 
@@ -142,7 +142,7 @@
     -moz-box-shadow: 0px 0px 8px #28921f; 
     -webkit-box-shadow: 0px 0px 8px #28921f; 
 }
-.textbox:required:valid, textarea:required:valid {
+.textbox:required:valid, .textarea:required:valid {
     background: #fff url(icons/valid_small.png) no-repeat 98% center;
     
     border: 1px solid #28921f; 
@@ -151,13 +151,13 @@
     -webkit-box-shadow: 0px 0px 8px #28921f; 
 }
 
-.textbox:required:hover, textarea:required:hover {
+.textbox:required:hover, .textarea:required:hover {
     background: #FFF9DF url(icons/asterisk3.png) no-repeat 98% center;
 }
 
 
 
-.textbox:required:focus:invalid, textarea:required:focus:invalid {
+.textbox:required:focus:invalid, .textarea:required:focus:invalid {
     background: #fff url(icons/invalid_small.png) no-repeat 98% center;
     
     border: 1px solid #b03535; 
@@ -166,7 +166,7 @@
     -webkit-box-shadow: 0px 0px 8px #b03535; 
 }
 
-.textbox:required:invalid, textarea:required:invalid {
+.textbox:required:invalid, .textarea:required:invalid {
     background: #fff url(icons/invalid_small.png) no-repeat 98% center;
     
     border: 1px solid #b03535; 
@@ -176,7 +176,7 @@
 }
 
 
-.textbox:focus, textarea:focus {
+.textbox:focus, .textarea:focus {
     background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
     
     border: 1px solid #c4c4c4; 
@@ -278,8 +278,8 @@ label.radio:before {
   position: absolute;
   top:2px;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
 }
 
