@@ -64,7 +64,7 @@ function checkPasswordStrength(txt)
         return True(3);
     }
 }
-
+/*
 function False(ind)
 {
     flag[ind] = false;
@@ -245,4 +245,4 @@ function checkAll()
     document.getElementById('submitBTN').disabled = false;
     return true;
 }
-            
+*/    

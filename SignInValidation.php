@@ -3,9 +3,9 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
 
-    $title = "Log in Profile";
-    $content_title = "Log in Successfully!";
-    $content = "Just blank for now.";
+    $title = "Sign In Validation";
+    $content_title = "You are signed in successfully!";
+    $content = "";
     
     $EMPTY = 1;
     $WRONG = 2;
@@ -25,7 +25,7 @@
     }
     else
     {
-		header("Location: Login.php");
+		header("Location: SignIn.php");
 		echo ' <script type="text/javascript"> alert("The username or password you entered is incorrect! Please enter again");  </script>';
     }
     include 'Template/Template.php';

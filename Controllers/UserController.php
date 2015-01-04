@@ -6,14 +6,15 @@ class UserController {
     
     function InsertUser()
     {
-	$firstname = $_POST["firstnameTXT"];
-	$lastname = $_POST["lastnameTXT"];
-	$email = $_POST["emailTXT"];
-	$password = $_POST["passwordTXT"];
-	$birthday = $_POST["birthdaySLCT"];
-	$birthmonth = $_POST["birthmonthSLCT"];
-	$birthyear = $_POST["birthyearSLCT"];
-	$gender = $_POST["genderRB"];
+	/*$firstname = $_POST["firstname"];
+	$lastname = $_POST["lastname"];
+	$email = $_POST["email"];
+	$password = $_POST["password"];
+	$birthday = $_POST["birthday"];
+	$birthmonth = $_POST["birthmonth"];
+	$birthyear = $_POST["birthyear"];
+	$gender = $_POST["gender"];*/
+	var_dump($_POST);
 	
 	$user = new UserEntity(-1, $firstname, $lastname, $email, $password, $birthday, $birthmonth, $birthyear, $gender);
 	
@@ -22,24 +23,27 @@ class UserController {
     }
 	function UpdateUser()
 	{
-		$firstname=$_POST['firstnameTXT'];
-		$lastname=$_POST['lastnameTXT'];
-		$email=$_POST['emailTXT'];
-		$password=$_POST['passwordTXT1'];
-		
+	    /*
+		$firstname = $_POST["firstname"];
+		$lastname = $_POST["lastname"];
+		$email = $_POST["email"];
+		$password = $_POST["password"];
+*/
+	    var_dump($_POST);
 		$user = new UserEntity(-1, $firstname, $lastname, $email, $password, "", "", "", "");
 		
 		$userModel = new UserModel();
-		$userModel->UpdateUser($user);
+		return $userModel -> UpdateUser($user);
 	}
 	function LoginUser()
 	{
-		$email=$_POST['useremailTXT'];
-		$password=$_POST['passwordTXT'];
-		
-		$user = new UserEntity(-1,"","",$email,$password,"","","","");
+		/*$email = $_POST['email'];
+		$password = $_POST['password'];
+		*/
+		var_dump($_POST);
+		$user = new UserEntity(-1, "", "", $email, $password, "", "", "", "");
 		$userModel = new UserModel();
-		$userModel->LoginUser($user);
+		return $userModel -> SelectUser($user);
 	}
 }
 ?>
