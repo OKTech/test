@@ -1,0 +1,7 @@
+.ExamPaper{
+    border-style: solid;
+    border-color: black;
+}
+.capitalize{
+    text-transform: capitalize;
+}
