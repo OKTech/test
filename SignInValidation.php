@@ -3,6 +3,7 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
+    session_start();
     $header = "";
     $title = "Sign In Validation";
     $content_title = "You are signed in successfully!";
@@ -28,12 +29,16 @@
 	
 	if($userController->LoginUser($user) == 1)
 	    header("Location: Home.php");
-	else header("Location: SignIn.php");
+	else
+	{
+	    header("Location: SignIn.php");
+	    $_SESSION['error_message'] = "Wrong email or password.";
+	}
     }
     else
     {
 	header("Location: SignIn.php");
-	echo ' <script type="text/javascript"> alert("The username or password you entered is incorrect! Please enter again");  </script>';
+	$_SESSION['error_message'] = "You must enter the email and password fields.";
     }
     include 'Template/MainTemplate.html';
 ?>
