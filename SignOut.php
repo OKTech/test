@@ -15,7 +15,6 @@
     {
 	session_destroy();
 	session_start();
-	$_SESSION['error_tip'] = 'Bye bye! :)';
 	header("Location: FrontPage.php");
     }
     else
