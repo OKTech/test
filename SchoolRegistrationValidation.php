@@ -50,13 +50,13 @@
             $res7 = validatePhone($fax);
             $res8 = validatePhoto($photo);
             if (!checkUserAvailability($email,$password)){
-                echo '<script type="text/javascript">alert("ERROR IN DATABASE");</script>';
-                //header("Location: SchoolRegistration.php"); 
+                //echo '<script type="text/javascript">alert("ERROR IN DATABASE");</script>';
+                header("Location: SchoolRegistration.php"); 
                 return;
             }
             if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res6 || !$res7 || !$res8){
-                echo '<script type="text/javascript">alert("ERROR IN VALIDATION");</script>';
-                //header("Location: SchoolRegistration.php");   
+                //echo '<script type="text/javascript">alert("ERROR IN VALIDATION");</script>';
+                header("Location: SchoolRegistration.php");   
             } else {
                 $schoolController = new SchoolController();
                 $schoolController->InsertSchool();
@@ -66,10 +66,11 @@
  
         }
         
-        function validateEmail ($email){
-            
-            
-            return true;
+        function validateEmail ($email){         
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return true;
+            } 
+            return false;
         }
         
         function validatePassword ($password){
