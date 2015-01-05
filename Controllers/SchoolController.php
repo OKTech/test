@@ -24,5 +24,10 @@ class SchoolController {
 	$schoolModel = new SchoolModel();
 	$schoolModel->InsertSchool($school);
     }
+    
+    function selectSchool($user_id){
+        $schoolModel = new SchoolModel();
+        $schoolModel->SelectSchool($user_id);
+    }
 }
 ?>

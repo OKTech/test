@@ -1,6 +1,12 @@
 <?php
-    $title = "Profile";
+    require ("Controllers/SchoolController.php");
+    $title = "School Profile";
     $header = "";
+    $error_tip="";
+    $res = "";
+    $schoolController = new SchoolController();
+    if ($schoolController->selectSchool($_SESSION['user_id']) == 0)
+    $res = "seeeefr";
     $content_title = "";
          $content = '<div id="content" class="clearfix">
 		<section id="left">
@@ -10,7 +16,7 @@
 				</div>
 				
 				<div class="data">
-					<h1>Johnny Appleseed</h1>
+					<h1>'.$res. '</h1>
 					<h3>San Francisco, CA</h3>
 					<h4><a href="http://spyrestudios.com/">http://spyrestudios.com/</a></h4>
 					<div class="socialMediaLinks">
