@@ -23,27 +23,21 @@ class UserController {
     }
 	function UpdateUser()
 	{
-	    /*
+	    
 		$firstname = $_POST["firstname"];
 		$lastname = $_POST["lastname"];
 		$email = $_POST["email"];
 		$password = $_POST["password"];
-*/
-	    var_dump($_POST);
+
 		$user = new UserEntity(-1, $firstname, $lastname, $email, $password, "", "", "", "");
 		
 		$userModel = new UserModel();
 		return $userModel -> UpdateUser($user);
 	}
-	function LoginUser()
+	function LoginUser($user)
 	{
-		/*$email = $_POST['email'];
-		$password = $_POST['password'];
-		*/
-		var_dump($_POST);
-		$user = new UserEntity(-1, "", "", $email, $password, "", "", "", "");
-		$userModel = new UserModel();
-		return $userModel -> SelectUser($user);
+		$userModel = new UserModel($user);
+		return $userModel -> LoginUser($user);
 	}
 }
 ?>
