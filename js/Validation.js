@@ -130,6 +130,30 @@ function checkMatch(txt, txt2)
     }
     return False(4);
 }
+function checkPhoneValidity(txt)
+{
+    var x = document.getElementById(txt);
+    if(x.value === "")
+    {
+        clearTextboxClasses(x);
+        x.className += " empty";
+        
+        x.setCustomValidity('You must fill this field.');
+    }
+    else if(/^\+(?:[0-9]●?){6,14}[0-9]$/.test(x.value))
+    {
+        clearTextboxClasses(x);
+        x.className += " xvalid";
+        
+        x.setCustomValidity('');
+    }
+    else
+    {
+        clearTextboxClasses(x);
+        x.className += " xinvalid";
+        x.setCustomValidity(label + ' Invalid Number!');
+    }
+}
 /*
 function init()
 {

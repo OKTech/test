@@ -28,7 +28,7 @@
 		<fieldset>
                         <h3 class="fs-subtitle">Personal Identification</h3>
 			<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="email" style="width:90%; height:50px" oninput="checkEmailValidity(\'email\')"/>
-			<input value="" type="password" placeholder="Password" class="textbox" type="text" id="password" name="passwordTXT" style="width:90%; height:50px" oninput="checkPasswordStrength(\'password\')">
+			<input value="" type="password" placeholder="Password" class="textbox" type="text" id="password" name="passwordTXT" style="width:90%; height:50px"/>
                         
 			<input type="button" name="next" class="next action-button" value="Next" id="fnext_id" style="height:40px" />
 		</fieldset>
@@ -57,8 +57,8 @@
 		<fieldset>
 			<h3 class="fs-subtitle">Contact Details</h3>
 
-			<input value="" placeholder="Phone" class="textbox" type="text" name="phoneTXT" id="phone_id" oninput="" style="width:100%; height:50px"/>
-			<input value="" placeholder="Fax" class="textbox" type="text" name="faxTXT" id="twitter_id" oninput="" style="width:100%; height:50px"/>
+			<input value="" placeholder="Phone" class="textbox" type="text" name="phoneTXT" id="phone" style="width:100%; height:50px" oninput="checkPhoneValidity(\'phone\')"/>
+			<input value="" placeholder="Fax" class="textbox" id="fax" type="text" name="faxTXT" id="twitter_id" style="width:100%; height:50px" oninput="checkPhoneValidity(\'fax\')"/>
 			<textarea value="" placeholder="Address" class="addresstextarea" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px"/></textarea>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
 			<input type="submit" name="submit" class="action-button" value="Submit" id="submit_id" />
