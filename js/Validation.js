@@ -61,7 +61,7 @@ function checkPasswordStrength(txt)
 function checkNameValidity(txt, label)
 {
     var x = document.getElementById(txt);
-    if(x.value == "")
+    if(x.value === "")
     {
         clearTextboxClasses(x);
         x.className += " empty";

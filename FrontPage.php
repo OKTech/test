@@ -79,7 +79,7 @@
     <br style="clear: left;" />
     </div><br style="clear: left;" />
     
-    <script src="js/FrontPageValidation.js" type="text/javascript"></script>
+    <script src="js/Validation.js" type="text/javascript"></script>
     <script> var LINK = "sinupLI"; </script>
     ';
     include 'Template/FrontPageTemplate.php';
