@@ -17,10 +17,10 @@
     $email_flag = $OK;
     $password_flag = $OK;
 
-    if(!isset($_POST["firstnameTXT"])){$firstname_flag = $EMPTY;}
-    if(!isset($_POST["lastnameTXT"])){$lastname_flag = $EMPTY;}
-    if(!isset($_POST["emailTXT"])){$email_flag = $EMPTY;}
-    if(!isset($_POST["passwordTXT1"])){$password_flag = $EMPTY;}
+    if(!isset($_POST["firstname"])){$firstname_flag = $EMPTY;}
+    if(!isset($_POST["lastname"])){$lastname_flag = $EMPTY;}
+    if(!isset($_POST["email"])){$email_flag = $EMPTY;}
+    if(!isset($_POST["passwordnew"])){$password_flag = $EMPTY;}
 	
     if($firstname_flag == $OK && $lastname_flag == $OK && $email_flag == $OK && $password_flag == $OK )
     {
