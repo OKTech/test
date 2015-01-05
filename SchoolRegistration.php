@@ -7,6 +7,7 @@
     $header = "";
     $title = "School Registration";
     $content_title = "";
+    $error_tip="";
     if (!isset($_SESSION['error_message'])) $_SESSION['error_message'] = "";
     //<!--div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div-->
     $content = '
@@ -22,7 +23,7 @@
 			<li>School Information</li>
 			<li>Personal Details</li>
 		</ul>
-                <div id = "error_message_div" class="errorTip" style="color:red">' .$_SESSION["error_message"]. '</div><br/>
+                <div id = "error_message_div" style="color:red; font-weight:bold; font-size:15px">' .$_SESSION["error_message"]. '</div><br/>
 		<!-- fieldsets -->
 		<fieldset>
                         <h3 class="fs-subtitle">Personal Identification</h3>
