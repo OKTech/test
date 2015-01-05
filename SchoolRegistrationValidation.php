@@ -33,8 +33,10 @@
         
         function checkUserAvailability($email,$password){
             require ("Models/UserModel.php");
+            $user = new UserEntity ("","","",$email,$password,"","","","");
             $userModel = new UserModel();
-            if($userModel->isExist($email,$password) == false) return false;
+            
+            if($userModel->LoginUser($user) == false) return false;
             return true;
         }
         
