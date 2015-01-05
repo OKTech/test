@@ -17,24 +17,24 @@
 				
 				<div class="data">
 					<h1>'.$_SESSION['school_name']. '</h1>
-					<h3>San Francisco, CA</h3>
-					<h4><a href="http://spyrestudios.com/">http://spyrestudios.com/</a></h4>
-					<div class="socialMediaLinks">
-						<a href="http://twitter.com/jakerocheleau" rel="me" target="_blank"><img src="css/Profile/img/twitter.png" alt="@jakerocheleau" /></a>
-						<a href="http://gowalla.com/users/JakeRocheleau" rel="me" target="_blank"><img src="css/Profile/img/gowalla.png" /></a>
-					</div>
+					<h3>' .$_SESSION['school_address']. '</h3>
+					
 					<div class="sep"></div>
-					<ul class="numbers clearfix">
+					<!--ul class="numbers clearfix">
 						<li>Reputation<strong>185</strong></li>
 						<li>Checkins<strong>344</strong></li>
 						<li class="nobrdr">Days Out<strong>127</strong></li>
-					</ul>
+					</ul-->
 				</div>
 			</div>
 			
-			<h1>About Me:</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</section>
+			<h1>About This School:</h1>
+                        <p>Facebook Account : ' .$_SESSION['school_facebook']. '</p>
+                        <p>Twitter Account : ' .$_SESSION['school_twitter']. '</p>
+                        <p>Google Plus Account : ' .$_SESSION['school_google']. '</p>
+                        <p>Phone Number : ' .$_SESSION['school_phone']. '</p>
+                        <p>Fax : ' .$_SESSION['school_fax']. '</p>
+			</section>
 		
 		<section id="right">
 			<div class="gcontent">
@@ -53,9 +53,8 @@
 			</div>
 			
 			<div class="gcontent">
-				<div class="head"><h1>Friends List</h1></div>
+				<div class="head"><h1>People in this School</h1></div>
 				<div class="boxy">
-					<p>Your friends - 106 total</p>
 					
 					<div class="friendslist clearfix">
 						<div class="friend">

@@ -22,10 +22,11 @@
 
             while($row= mysqli_fetch_array($result))
             {
-                session_start();
+                //session_start();
                 $_SESSION['school_name'] = $row['name'];
                 $_SESSION['school_facebook'] = $row['facebook'];
                 $_SESSION['school_twitter'] = $row['twitter'];
+                $_SESSION['school_google'] = $row['google'];
                 $_SESSION['school_country'] = $row['country'];
                 $_SESSION['school_grade'] = $row['grade'];
                 $_SESSION['school_address'] = $row['address'];

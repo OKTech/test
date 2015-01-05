@@ -60,6 +60,13 @@
                 header("Location: SchoolRegistration.php");
                 $_SESSION['error_message'] = "Some of Your Inputs Formats are Wrong!";
             } else {
+                // Where the file is going to be placed 
+                $target_path = "Images/";
+
+                /* Add the original filename to our target path.  
+                Result is "uploads/filename.extension" */
+                $target_path = $target_path . basename( $_FILES['uploadedfile'][$_File['upload']]); 
+                
                 $schoolController = new SchoolController();
                 $schoolController->InsertSchool();
                 header("Location: SchoolRegistrationComplete.php");

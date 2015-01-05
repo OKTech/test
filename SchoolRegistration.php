@@ -61,7 +61,7 @@
 			<input value="" placeholder="Fax" class="textbox" id="fax" type="text" name="faxTXT" id="twitter_id" style="width:100%; height:50px" oninput="checkPhoneValidity(\'fax\')"/>
 			<textarea value="" placeholder="Address" class="addresstextarea" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px"/></textarea>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
-			<input type="submit" name="submit" class="action-button" value="Submit" id="submit_id" />
+			<input type="submit" name="srsubmit" class="action-button" value="Submit" id="srsubmit" />
 		</fieldset> 
                 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
                 
