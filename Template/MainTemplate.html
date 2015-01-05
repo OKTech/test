@@ -38,9 +38,10 @@
                 </div>
         </nav>
         <?php echo $header; ?>
+        <span class="shadow-top"></span>
+        <?php if(isset($_SESSION['error_tip'])) echo $_SESSION['error_tip']; ?>
         <!-- main -->
         <div class="main">
-                <span class="shadow-top"></span>
                 <!-- shell -->
                 <div class="shell">
                         <div class="container">
