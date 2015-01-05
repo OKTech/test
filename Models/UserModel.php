@@ -6,7 +6,7 @@ class UserModel
 {
     function InsertUser(UserEntity $user)
     {
-	$query = sprintf("INSERT INTO usersTBL
+	$query = sprintf("INSERT INTO user
 		(firstname, lastname, email, password, birthday, birthmonth, birthyear, gender)
 		VALUES
 		('%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d')

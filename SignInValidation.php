@@ -1,5 +1,4 @@
 <?php
-// zabbato ba2a .. yo3tabar php validation and execution for the update
     require './Controllers/UserController.php';
     $userController = new UserController();
     
@@ -31,8 +30,8 @@
 	    header("Location: Home.php");
 	else
 	{
-	    header("Location: SignIn.php");
 	    $_SESSION['error_message'] = "Wrong email or password.";
+	    header("Location: SignIn.php");
 	}
     }
     else

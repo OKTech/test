@@ -3,9 +3,10 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
-    $error_tip = "";
     $title = "Welcome";
     $content_title = "</br></br>";
+    $error_tip="";
+    if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
     $content = 
 '
 	  <div style="float:left;">
@@ -82,6 +83,9 @@
     <script src="js/Validation.js" type="text/javascript"></script>
     <script> var LINK = "sinupLI"; </script>
     ';
+    
+    
+    if(isset($_SESSION['error_tip']) == 1) $_SESSION['error_tip'] = "";
     include 'Template/FrontPageTemplate.php';
 ?>
 

@@ -4,7 +4,8 @@
     $header = "";
     $title = "Home";
     $content = "";
-    $error_tip=$_SESSION['error_tip'];
+    $error_tip="";
+    if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
     if(!isset($_SESSION['user_firstname']) && !isset($_SESSION['user_lastname']))
 	header("Location: FrontPage.php");
     
@@ -15,6 +16,6 @@
 	</script>
     ";
     
-    $_SESSION['error_tip'] = "";
+    if(isset($_SESSION['error_tip']) == 1) $_SESSION['error_tip'] = "";
 
 include 'Template/MainTemplate.html';
