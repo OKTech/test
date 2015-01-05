@@ -8,10 +8,12 @@
     $title = "School Registration";
     $content_title = "";
     //session_start();
+    if (!isset($_SESSION['error_message'])) $_SESSION['error_message'] = "";
+    //<!--div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div-->
     $content = '
         
 	<div style="float:center;">
-        <div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div>
+        
 		
 	<!-- multistep form -->
 	<form id="msform" action="SchoolRegistrationValidation.php" method="POST" noValidation>
@@ -26,6 +28,7 @@
                         <h3 class="fs-subtitle">Personal Identification</h3>
 			<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="username_id" style="width:90%; height:50px"/>
 			<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" style="width:90%; height:50px">
+                        <div id = "error_message_div" class="errorTip" style="color:red">' .$_SESSION["error_message"]. '</div>
 			<input type="button" name="next" class="next action-button" value="Next" id="fnext_id" style="height:40px" />
 		</fieldset>
 		<fieldset>
