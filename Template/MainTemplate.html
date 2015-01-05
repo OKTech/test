@@ -39,10 +39,10 @@
         </nav>
         <?php echo $header; ?>
         <span class="shadow-top"></span>
-        <?php if(isset($_SESSION['error_tip']))
+        <?php if($error_tip != "")
                 {
-                    echo $_SESSION['error_tip'];
-                    $_SESSION['error_tip'] = "";
+                    echo '<div class="errorTip"><label>'.$error_tip.'</label></div></br></br>';
+                    $error_tip = "";
                 }
         ?>
         <!-- main -->

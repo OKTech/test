@@ -37,8 +37,8 @@
     }
     else
     {
+	$_SESSION['error_tip'] = "You must enter the email and password fields.";
 	header("Location: SignIn.php");
-	$_SESSION['error_message'] = "You must enter the email and password fields.";
     }
     include 'Template/MainTemplate.html';
 ?>
