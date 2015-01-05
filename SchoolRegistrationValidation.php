@@ -51,16 +51,19 @@
             $res8 = validatePhoto($photo);
             if (!checkUserAvailability($email,$password)){
                 //echo '<script type="text/javascript">alert("ERROR IN DATABASE");</script>';
-                header("Location: SchoolRegistration.php"); 
+                header("Location: SchoolRegistration.php");
+                $_SESSION['error_message'] = "Sorry.. Wrong Email or Password!";
                 return;
             }
             if (!$res1 || !$res2 || !$res3 || !$res4 || !$res5 || !$res6 || !$res7 || !$res8){
                 //echo '<script type="text/javascript">alert("ERROR IN VALIDATION");</script>';
-                header("Location: SchoolRegistration.php");   
+                header("Location: SchoolRegistration.php");
+                $_SESSION['error_message'] = "Sorry.. Some of Your Inputs Formats are Wrong!";
             } else {
                 $schoolController = new SchoolController();
                 $schoolController->InsertSchool();
                 header("Location: SchoolRegistrationComplete.php");
+                $_SESSION['error_message'] = "";
             }
             
  

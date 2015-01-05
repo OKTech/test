@@ -7,9 +7,11 @@
     $header = "";
     $title = "School Registration";
     $content_title = "";
+    //session_start();
     $content = '
+        
 	<div style="float:center;">
-		
+        <div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div>
 		
 	<!-- multistep form -->
 	<form id="msform" action="SchoolRegistrationValidation.php" method="POST" noValidation>
