@@ -9,7 +9,7 @@
 						<div class="header-cnt">
 							<h1 id="logo"><a href="#">Schooli</a></h1>		
 							<p>
-								<h1 style="color:white;" class="mobile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You success begins here!</h1>
+								<h1 style="padding-top: 8px; color:white; font-family: \'Ubuntu\', sans-serif; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your success begins here!</h1>
 								<!-- <span class="desktop">Kamello is the first and only website providing E-Learning and Educational Social Network. Powered and Developed by Menoon Inc.</span> -->
 							</p>
 						</div>

@@ -1,4 +1,9 @@
 
+function setRequiredCustomValidity(defaultMessage)
+{
+    
+}
+
 function clearTextboxClasses(x)
 {
     x.className = x.className.replace( /(?:^|\s)tooWeakPassword(?!\S)/g , '' );

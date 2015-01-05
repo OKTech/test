@@ -6,7 +6,7 @@
     $SchoolController = new SchoolController();
     $header = "";
     $title = "School Registration";
-    $content_title = "";
+    $content_title = "School Registration";
     $error_tip="";
     if (!isset($_SESSION['error_message'])) $_SESSION['error_message'] = "";
     //<!--div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div-->
