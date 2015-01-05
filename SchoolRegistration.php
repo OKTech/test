@@ -27,8 +27,8 @@
 		<!-- fieldsets -->
 		<fieldset>
                         <h3 class="fs-subtitle">Personal Identification</h3>
-			<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="username_id" style="width:90%; height:50px"/>
-			<input value="" type="password" placeholder="Password" class="textbox" type="text" name="passwordTXT" style="width:90%; height:50px">
+			<input value="" placeholder="Email" class="textbox" type="text" name="emailTXT" id="email" style="width:90%; height:50px" oninput="checkEmailValidity(\'email\')"/>
+			<input value="" type="password" placeholder="Password" class="textbox" type="text" id="password" name="passwordTXT" style="width:90%; height:50px" oninput="checkPasswordStrength(\'password\')">
                         
 			<input type="button" name="next" class="next action-button" value="Next" id="fnext_id" style="height:40px" />
 		</fieldset>
@@ -79,7 +79,7 @@
         </script>
 	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery.easing.min.js" type="text/javascript"></script>
-        <!--script src="js/FrontPageValidation.js" type="text/javascript"></script-->
+        <script src="js/Validation.js" type="text/javascript"></script>
         <script src="js/School Registration.js" type="text/javascript"></script>
         
         <link rel="stylesheet" href="css/style.css" type="text/css"/>

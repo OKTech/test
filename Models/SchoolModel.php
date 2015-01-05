@@ -20,7 +20,7 @@
 
             if($result == null) return 0;
 
-            while(true)
+            while($row= mysqli_fetch_array($result))
             {
                 session_start();
                 $_SESSION['school_name'] = $row['name'];
@@ -38,11 +38,11 @@
 
 
         function PerformQuery($query){
-            require 'Models/Credentials.php';
+            require("Models/Credentials.php");
             $connection  = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
-
-            mysqli_query($connection, $query) or die(mysqli_error($connection));
+            $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
             mysqli_close($connection);
+            return $result;
         }
         
         

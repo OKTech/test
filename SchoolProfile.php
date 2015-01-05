@@ -16,7 +16,7 @@
 				</div>
 				
 				<div class="data">
-					<h1>'.$res. '</h1>
+					<h1>'.$_SESSION['school_name']. '</h1>
 					<h3>San Francisco, CA</h3>
 					<h4><a href="http://spyrestudios.com/">http://spyrestudios.com/</a></h4>
 					<div class="socialMediaLinks">
