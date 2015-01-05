@@ -3,6 +3,7 @@
     require './Controllers/UserController.php';
     $userController = new UserController();
     
+    $error_tip = "";
     $title = "Welcome";
     $content_title = "</br></br>";
     $content = 
