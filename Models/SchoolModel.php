@@ -36,21 +36,7 @@
             return 0;
         }
 
-	
-	/*function UpdateSchool(UserEntity $school)
-	{
-            $query='update schoolsTBL set schoolName="'.$school->schoolName.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where schoolname="'.$school->schoolName.'"';
-            $this->PerformQueryUpdate($query);
-	}
-	function PerformQueryUpdate($query)
-        {
-            require 'Models/Credentials_Copy.php';
-            $connection = mysqli_connect($host, $username, $password, $database) or die(mysqli_error($connection));
-            //mysqli_select_db();
-            //echo $query;
-            mysqli_query($connection, $query) or die(mysqli_error($connection));
-            mysqli_close();
-        }*/
+
         function PerformQuery($query){
             require 'Models/Credentials.php';
             $connection  = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
