@@ -1,6 +1,7 @@
 <?php
 require './Controllers/ExamController.php';
 $examController = new ExamController();
+$error_tip="";
 
 $header = "";
 $title = "Exam";

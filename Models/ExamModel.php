@@ -7,13 +7,10 @@ require ("Entities/ExamEntity.php");
         function GetProblems(){
             session_start();
             $userID = $_SESSION['user_id'];
-            
             $query1  = 'select * from exampaper where studentid='.$userID; 
-            
             $result = $this->PerformQuery($query1);
 
             if($result == null) return "";
-            
             $problemTXT = array();
             
             while ($row1= mysqli_fetch_array($result)){
@@ -22,18 +19,28 @@ require ("Entities/ExamEntity.php");
 
                 if($result2 == null) return "";
                 $problemTXT;
-                $i = 0;
-                while($row = mysqli_fetch_array($result2)){
-                    
-                    $problemTXT[$i] = $row['text'];
-                    echo '<script type="text/javascript"> alert("here5 '.$problemTXT[$i].'"); </script>';
-                    $i ++;
-                }
+                $problemTXT[0] = $this->GetExamTitle($row1);
+                while($row = mysqli_fetch_array($result2))
+                    $problemTXT[] = $row['text'];
                 
                 return $problemTXT;
             }
             
             return "";
+        }
+        
+        function GetExamTitle($row1){
+            
+                $query2  = 'select * from exam where id='.$row1['examid'];
+                $result2 = $this->PerformQuery($query2);
+
+                if($result2 == null) return "";
+                while($row2 = mysqli_fetch_array($result2)){
+                    $title = $row2['title'];
+                }
+                
+                return $title;
+            
         }
         
         function PerformQuery($query){
