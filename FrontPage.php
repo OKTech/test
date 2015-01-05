@@ -30,7 +30,7 @@
 		
 		<div style="padding-top:13px;"><p>Notice that this process must be done by school owner or director as it will need school verification and payements for premium accounts.</p></div>
 		
-		<div align="center"><button class="button" onclick="location.href=\'SchoolRegistraion.php\';">Register School</button></div>
+		<div align="center"><button class="button" onclick="location.href=\'SchoolRegistration.php\';">Register School</button></div>
 	    </div>
 
 	</div>
@@ -46,7 +46,6 @@
 		<br/>
 
 		<input value="" placeholder="First Name" class="textbox empty" type="text" name="firstname" id="firstname" oninput="checkNameValidity(\'firstname\', \'First Name\')" style="width:35%;"/>
-		<span class="form_hint">Proper format, example: Ahmed Kamel</span>
 
 		<input value="" placeholder="Last Name" class="textbox empty" type="text" name="lastname" id="lastname" oninput="checkNameValidity(\'lastname\', \'Last Name\')" style="width:35%;"/>
 

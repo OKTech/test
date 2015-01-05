@@ -10,7 +10,7 @@
     $error_tip = "";
     if(isset($_SESSION['user_firstname']))
     {
-	$_SESSION['error_tip'] = 'You are already logged in.';
+	$_SESSION['error_tip'] = 'You cannot access this page, as you are already logged in!';
 	header("Location: Home.php");
     }
     if(isset($_SESSION['error_message']) == 1) $error_message = $_SESSION['error_message'];

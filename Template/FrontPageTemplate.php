@@ -12,7 +12,6 @@
 								<h1 style="color:white;" class="mobile">We teach success!</h1>
 								<!-- <span class="desktop">Kamello is the first and only website providing E-Learning and Educational Social Network. Powered and Developed by Menoon Inc.</span> -->
 							</p>
-							<a href="#" class="blue-btn">GET PREMIUM</a>
 						</div>
 						<!-- end of header-cnt -->
 						<!-- slider -->

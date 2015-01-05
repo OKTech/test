@@ -4,7 +4,7 @@ var flag = new Array(10);
 function checkPasswordStrength(txt)
 {
     var x = document.getElementById(txt);
-    alert(x.className);
+    //alert(x.className);
     var strength = 0;
 
     if(/[A-Z]/.test(x.value))strength++;
@@ -18,7 +18,7 @@ function checkPasswordStrength(txt)
         x.className = x.className.replace( /(?:^|\s)weakPassword(?!\S)/g , '' );
         x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
         x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
-        x.setCustomValidity('It cannot bempty!');
+        x.setCustomValidity('It cannot be empty!');
         return False(3);
     }
     else if(strength <= 2)
@@ -39,7 +39,7 @@ function checkPasswordStrength(txt)
             x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
             x.className += " weakPassword";
         }
-        x.setCustomValidity('Email format is incorrect.');
+        x.setCustomValidity('Weak password. Make it stronger by adding capital and small letters, digits and special characters.');
         return False(3);
     }
     else
