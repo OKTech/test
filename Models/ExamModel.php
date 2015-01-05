@@ -16,9 +16,8 @@ require ("Entities/ExamEntity.php");
             while ($row1= mysqli_fetch_array($result)){
                 $query  = 'select * from problem where examid='.$row1['examid'];
                 $result2 = $this->PerformQuery($query);
-
                 if($result2 == null) return "";
-                $problemTXT;
+                
                 $problemTXT[0] = $this->GetExamTitle($row1);
                 while($row = mysqli_fetch_array($result2))
                     $problemTXT[] = $row['text'];
