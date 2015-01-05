@@ -50,7 +50,7 @@
 		<input value="" placeholder="Last Name" class="textbox empty" type="text" name="lastname" id="lastname" oninput="checkNameValidity(\'lastname\', \'Last Name\')" style="width:35%;"/>
 
 		<input value="" placeholder="Email" class="textbox empty" type="text" name="email" id="email" oninput="checkEmailValidity(\'email\')" />
-		<input value="" placeholder="Re-enter Email" class="textbox empty" type="text" name="emailagain" id="emailagain" oninput="checkMatch(\'email\', \'emailagain\')">
+		<input value="" placeholder="Re-enter Email" class="textbox empty" type="text" name="emailagain" id="emailagain" oninput="checkMatch(\'emailagain\', \'email\')">
 		<input value="" type="password" placeholder="Password" class="textbox empty" type="text" name="password" id="password" oninput="checkPasswordStrength(\'password\')">
 
 		<h3 align="left" style="margin-left: 5px; margin-top: 10px;color:#636363; font-size:20px;">Birthday</h3>
@@ -80,22 +80,10 @@
     </div><br style="clear: left;" />
     
     <script src="js/FrontPageValidation.js" type="text/javascript"></script>
-        <script>
-            var LINK = "sinupLI";
-        </script>
+    <script> var LINK = "sinupLI"; </script>
     ';
     include 'Template/FrontPageTemplate.php';
 ?>
 
 
-
-	<!--script>
-                    $(".textbox[value=\'\']").addClass(\'empty\');
-                            $(\'input\').keyup(function(){
-                                if( $(this).val() === ""){
-                                    $(this).addClass("empty");
-                                }else{
-                                    $(this).removeClass("empty");
-                                }
-                            });
-                </script-->
+	

@@ -10,28 +10,16 @@
     
     border-radius: 4px; 
     -moz-border-radius: 4px; 
-    -webkit-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+    
     box-shadow: 0px 0px 8px #d9d9d9; 
     -moz-box-shadow: 0px 0px 8px #d9d9d9; 
     -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
-} 
- 
-.textbox:focus, .textarea:focus{ 
-
-    margin: 4px 4px 4px 4px;
-    padding: 4px 8px 4px 8px;
-    
-    outline: none; 
-    border: 1px solid #7bc1f7; 
-    box-shadow: 0px 0px 8px #7bc1f7; 
-    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
-    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
 
 .textbox:hover, .textarea:hover { 
     background: #FFF9DF; 
-} 
-
+}
 
 .dropdown {
     
@@ -119,91 +107,79 @@
     top:1px;
 }
 
-/*============================== FOR VALIDATION ====================================*/
-
-.form_hint, .required_notification {font-size: 11px;}
-
-.required_notification {
-    color:#d45252; 
-    margin:5px 0 0 0; 
-    display:inline;
-    float:right;
-}
-
-.textbox:required, .textarea:required {
-    background: #fff url(icons/asterisk3.png) no-repeat 98% center;
-}
-
-.textbox:required:focus:valid, .textarea:required:focus:valid {
-    background: #fff url(icons/valid_small.png) no-repeat 98% center;
+.errorTip{
+    float: left;
+    font-size: 15px; 
+    font-weight: bold;
+    color: #666;
+    margin: 4px 4px 4px 0px;
+    padding: 9px 15px 9px 0px;
     
-    border: 1px solid #28921f; 
-    box-shadow: 0px 0px 8px #28921f; 
-    -moz-box-shadow: 0px 0px 8px #28921f; 
-    -webkit-box-shadow: 0px 0px 8px #28921f; 
-}
-.textbox:required:valid, .textarea:required:valid {
-    background: #fff url(icons/valid_small.png) no-repeat 98% center;
-    
-    border: 1px solid #28921f; 
-    box-shadow: 0px 0px 8px #28921f; 
-    -moz-box-shadow: 0px 0px 8px #28921f; 
-    -webkit-box-shadow: 0px 0px 8px #28921f; 
-}
-
-.textbox:required:hover, .textarea:required:hover {
-    background: #FFF9DF url(icons/asterisk3.png) no-repeat 98% center;
-}
-
-
-
-.textbox:required:focus:invalid, .textarea:required:focus:invalid {
-    background: #fff url(icons/invalid_small.png) no-repeat 98% center;
-    
-    border: 1px solid #b03535; 
-    box-shadow: 0px 0px 8px #b03535; 
-    -moz-box-shadow: 0px 0px 8px #b03535; 
-    -webkit-box-shadow: 0px 0px 8px #b03535; 
-}
-
-.textbox:required:invalid, .textarea:required:invalid {
-    background: #fff url(icons/invalid_small.png) no-repeat 98% center;
-    
-    border: 1px solid #b03535; 
-    box-shadow: 0px 0px 8px #b03535; 
-    -moz-box-shadow: 0px 0px 8px #b03535; 
-    -webkit-box-shadow: 0px 0px 8px #b03535; 
-}
-
-
-.textbox:focus, .textarea:focus {
-    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
-    
-    border: 1px solid #c4c4c4; 
-    box-shadow: 0px 0px 8px #d9d9d9; 
-    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
-    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
-}
-
-.textbox.empty:invalid, .textbox[value='']{
-    
-    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
-    
-    border: 1px solid #c4c4c4; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
     box-shadow: 0px 0px 8px #d9d9d9; 
     -moz-box-shadow: 0px 0px 8px #d9d9d9; 
     -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+    text-align: center; width:1070px; padding: 10px 10px 10px 10px; margin-left: 100px; margin-right: 100px; margin-top: 20px; margin-bottom:20px;
 }
 
-.textbox.empty:invalid:focus, .textbox[value='']:invalid:focus{
-    
-    background: #FFF url(icons/asterisk3.png) no-repeat 98% center;
-    
+/*============================== FOR VALIDATION ====================================*/
+
+
+.textbox.empty:focus{
+    //background: #fff url(icons/asterisk3.png) no-repeat 98% center;
     border: 1px solid #7bc1f7; 
     box-shadow: 0px 0px 8px #7bc1f7; 
     -moz-box-shadow: 0px 0px 8px #7bc1f7; 
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
+
+.textbox.xinvalid{
+    background: #fff url(icons/invalid_small.png) no-repeat 98% center;
+    border: 1px solid #b03535; 
+    box-shadow: 0px 0px 8px #b03535; 
+    -moz-box-shadow: 0px 0px 8px #b03535; 
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+
+.textbox.xvalid{
+    background: #fff url(icons/valid_small.png) no-repeat 98% center;
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f; 
+    -webkit-box-shadow: 0px 0px 8px #28921f; 
+}
+.textbox.tooWeakPassword{
+    background: #fff url(images/password-veryweak.png) no-repeat 98% center;
+    border: 1px solid #b03535; 
+    box-shadow: 0px 0px 8px #b03535;
+    -moz-box-shadow: 0px 0px 8px #b03535;
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+.textbox.weakPassword{
+    background: #fff url(images/password-weak.png) no-repeat 98% center; 
+    border: 1px solid #b03535;  
+    box-shadow: 0px 0px 8px #b03535;  
+    -moz-box-shadow: 0px 0px 8px #b03535; 
+    -webkit-box-shadow: 0px 0px 8px #b03535; 
+}
+.textbox.moderatePassword{
+    background: #fff url(images/password-moderate.png) no-repeat 98% center; 
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f;  
+    -webkit-box-shadow: 0px 0px 8px #28921f;
+}
+.textbox.strongPassword{
+    background: #fff url(images/password-strong.png) no-repeat 98% center; 
+    border: 1px solid #28921f; 
+    box-shadow: 0px 0px 8px #28921f; 
+    -moz-box-shadow: 0px 0px 8px #28921f;  
+    -webkit-box-shadow: 0px 0px 8px #28921f;
+}
+
+/* =================================== */
 
 .form_hint {
     background: #d45252;
@@ -229,36 +205,7 @@
     position:relative;
 }
 
-.tooWeakPassword{
-    background: #fff url(./css/images/password-veryweak.png) no-repeat 98% center;
-    border: 1px solid #b03535; 
-    box-shadow: 0px 0px 8px #b03535;
-    -moz-box-shadow: 0px 0px 8px #b03535;
-    -webkit-box-shadow: 0px 0px 8px #b03535; 
-}
-.weakPassword{
-    background: #fff url(./css/images/password-weak.png) no-repeat 98% center; 
-    border: 1px solid #b03535;  
-    box-shadow: 0px 0px 8px #b03535;  
-    -moz-box-shadow: 0px 0px 8px #b03535; 
-    -webkit-box-shadow: 0px 0px 8px #b03535; 
-}
-.moderatePassword{
-    background: #fff url(./css/images/password-moderate.png) no-repeat 98% center; 
-    border: 1px solid #28921f; 
-    box-shadow: 0px 0px 8px #28921f; 
-    -moz-box-shadow: 0px 0px 8px #28921f;  
-    -webkit-box-shadow: 0px 0px 8px #28921f;
-}
-.strongPassword{
-    background: #fff url(./css/images/password-strong.png) no-repeat 98% center; 
-    border: 1px solid #28921f; 
-    box-shadow: 0px 0px 8px #28921f; 
-    -moz-box-shadow: 0px 0px 8px #28921f;  
-    -webkit-box-shadow: 0px 0px 8px #28921f;
-}
-
-/* ===================== TEST ==================== */
+/* ===================== shyaka checkbox ==================== */
 
 input[type=radio] {
   visibility: hidden;
@@ -307,20 +254,11 @@ input[type=radio]:checked + label:after {
 	opacity: 1;
 }
 
+.form_hint, .required_notification {font-size: 11px;}
 
-.errorTip{
-    float: left;
-    font-size: 15px; 
-    font-weight: bold;
-    color: #666;
-    margin: 4px 4px 4px 0px;
-    padding: 9px 15px 9px 0px;
-    
-    border-radius: 4px; 
-    -moz-border-radius: 4px; 
-    -webkit-border-radius: 4px; 
-    box-shadow: 0px 0px 8px #d9d9d9; 
-    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
-    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
-    text-align: center; width:1070px; padding: 10px 10px 10px 10px; margin-left: 100px; margin-right: 100px; margin-top: 20px; margin-bottom:20px;
+.required_notification {
+    color:#d45252; 
+    margin:5px 0 0 0; 
+    display:inline;
+    float:right;
 }
