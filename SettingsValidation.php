@@ -24,7 +24,15 @@
 	
     if($firstname_flag == $OK && $lastname_flag == $OK && $email_flag == $OK && $password_flag == $OK )
     {
-	$userController->UpdateUser();
+	$firstname = $_POST["firstname"];
+	$lastname = $_POST["lastname"];
+	
+	$email = $_POST["email"];
+	$password = $_POST["passwordnew"];
+
+	$user = new UserEntity(-1, $firstname, $lastname, $email, $password, "", "", "", "");
+
+	$userController->UpdateUser($user);
 	header("Location: Home.php");
     }
     else
