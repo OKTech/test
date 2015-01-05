@@ -14,12 +14,10 @@
     if(isset($_SESSION['user_firstname']))
     {
 	session_destroy();
-	session_start();
 	header("Location: FrontPage.php");
     }
     else
     {
-	$_SESSION['error_tip'] = 'You are not signed in!';
 	header("Location: FrontPage.php");
     }
     

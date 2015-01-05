@@ -5,8 +5,9 @@
     $error_tip="";
     $res = "";
     $schoolController = new SchoolController();
-    if ($schoolController->selectSchool($_SESSION['user_id']) == 0)
-    $res = "seeeefr";
+    $schoolController->selectSchool($_SESSION['user_id']);
+   if (!isset($_SESSION['user_id'])) header("Location: SchoolRegistration.php"); 
+   
     $content_title = "";
          $content = '<div id="content" class="clearfix">
 		<section id="left">
