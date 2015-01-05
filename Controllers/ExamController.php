@@ -28,9 +28,8 @@
                 </div>
                 <textarea placeholder="Write your answer here!" class="textarea" type="textarea" name="answerN'.$i.'" id="answer'.$i.'" style="width:90%;height:100px;"/>
                 </textarea>
-                ';
-                                     
-                echo '<script type="text/javascript"> alert("here2 '.$i.'"); </script>';
+                ';                    
+                
             } 
             
             
