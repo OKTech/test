@@ -7,6 +7,12 @@
     if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
     if(isset($_SESSION['error_message']) == 1)$error_message = $_SESSION['error_message'];
     
+    if(isset($_SESSION['user_id']))
+    {
+	$_SESSION['error_tip'] = 'You cannot access this page, as you are already logged in!';
+	header("Location: Home.php");
+    }
+    
     $title = "Sign Up";
     $content_title = "Sign Up";
     $content = 
