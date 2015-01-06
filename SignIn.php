@@ -1,8 +1,5 @@
 
 <?php
-    require './Controllers/UserController.php';
-    $userController = new UserController();
-    
     session_start();
     $header = "";
     $tip = "";
@@ -19,12 +16,14 @@
     $content = 
 '
     <div align="Center">
-	<form action="SignInValidation.php" method="post">
+	<form action="Controllers/UserController.php?functionName=LoginUser" method="post">
+	    </br></br>
+	    <input value="" placeholder="Email" class="textbox empty" type="text" name="email" id="email" style="width:33%;" required />
 	    </br>
+	    <input value="" type="password" placeholder="Password" class="textbox empty" id="password" name="password" style="width:33%;" required/>
 	    </br>
-	    <input value="" placeholder="Email" class="textbox empty" type="text" name="email" id="email" style="width:33%;"/></br>
-	    <input value="" type="password" placeholder="Password" class="textbox empty" id="password" name="password" style="width:33%;"/>
-	    </br><pre style="font-family:\'Ubuntu\', sans-serif; color: #2d2d2d; font-size: 16px;">'.$error_message.'</pre></br>
+	    <label style="color:red; font-weight:bold; font-size:15px">'.$error_message.'</label>
+	    </br></br>
 	    <input value="Sign In" type="submit" class="button"/>
     </form>
     </div>
@@ -33,5 +32,5 @@
     <script> var LINK = "signinLINK"; </script>
 ';
 
-include 'Template/MainTemplate.html';
+include 'Template/MainTemplate.php';
 ?>

@@ -1,7 +1,5 @@
 
 <?php
-    require './Controllers/UserController.php';
-    $userController = new UserController();
     
     $title = "Welcome";
     $content_title = "</br></br>";

@@ -1,8 +1,5 @@
 
 <?php
-    require './Controllers/UserController.php';
-    $userController = new UserController();
-    
     $error_tip = "";
     $header = "";
     $title = "Settings";

@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {margin: 0; padding: 0;}
+//* {margin: 0; padding: 0;}
 
 /*html {
 	height: 100%;
@@ -13,10 +13,10 @@
 //		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), 
 //		url('http://thecodeplayer.com/uploads/media/gs.png');
 //} */
-
+/*
 body {
 	font-family: montserrat, arial, verdana;
-}
+}*/
 /*form styles*/
 #msform {
 	width: 800px;
@@ -31,9 +31,9 @@ body {
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	padding: 20px 30px;
 	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
-	
+	width: 700px;
+	//margin: 0 10%;
+	align: center;
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
@@ -41,7 +41,7 @@ body {
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
-/*inputs*/
+/*inputs
 #msform input, #msform textarea {
 	padding: 15px;
 	border: 1px solid #ccc;
@@ -52,7 +52,7 @@ body {
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
-}
+}*/
 /*buttons*/
 #msform .action-button {
 	width: 110px;
@@ -137,7 +137,7 @@ body {
 }
 
 
-/*Costomized Classes*/
+/*Costomized Classes
 .dropdown {
 	color: #777;
 	padding: 20px;
@@ -152,7 +152,7 @@ body {
 	box-sizing: border-box;
 	margin-left: auto;
     margin-right: auto;
-}
+}*/
 
 
 

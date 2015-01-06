@@ -1,8 +1,5 @@
 
 <?php
-    require './Controllers/UserController.php';
-    $userController = new UserController();
-    
     session_start();
     $header = "";
     $tip = "";

@@ -1,22 +1,15 @@
 
 <?php
-    require './Controllers/UserController.php';
-    $userController = new UserController();
-    
     $header = "";
     $title = "Sign Up";
-    $content_title = "";
+    $content_title = "Sign Up";
     $error_tip="";
     if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
     $content = 
 '
     <div align="left" style="width:60%; padding-left:20%; padding-right:20%;">    
 	<form class="contact_form" action="SignUpValidation.php" name="signUpForm" method="POST">
-
-	    <h2 align="center" style="font-size: 36px; font-weight: bold;">Sign Up</h2>
-	    <h3 align="center" style="color:#636363; font-size:20px;">It\'s for free!</h3>
-
-	    <br/>
+	    <br/><br/>
 
 	    <input value="" placeholder="First Name" class="textbox empty" type="text" name="firstname" id="firstname" oninput="checkNameValidity(\'firstname\', \'First Name\')" style="width:42%;" required />
 

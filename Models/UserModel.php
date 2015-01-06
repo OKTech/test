@@ -1,6 +1,6 @@
 <?php
 
-require ("Entities/UserEntity.php");
+require ("../Entities/UserEntity.php");
 
 class UserModel
 {

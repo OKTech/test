@@ -1,5 +1,5 @@
 <?php
-    require './Controllers/UserController.php';
+    
     $userController = new UserController();
     
     session_start();
@@ -39,5 +39,5 @@
 	$_SESSION['error_tip'] = "You must enter the email and password fields.";
 	header("Location: SignIn.php");
     }
-    include 'Template/MainTemplate.html';
+    include 'Template/MainTemplate.php';
 ?>
