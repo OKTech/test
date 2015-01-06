@@ -11,8 +11,8 @@ function clearTextboxClasses(x)
     x.className = x.className.replace( /(?:^|\s)moderatePassword(?!\S)/g , '' );
     x.className = x.className.replace( /(?:^|\s)strongPassword(?!\S)/g , '' );
     x.className = x.className.replace( /(?:^|\s)empty(?!\S)/g , '' );
-    x.className = x.className.replace( /(?:^|\s)invalid(?!\S)/g , '' );
-    x.className = x.className.replace( /(?:^|\s)valid(?!\S)/g , '' );
+    x.className = x.className.replace( /(?:^|\s)xinvalid(?!\S)/g , '' );
+    x.className = x.className.replace( /(?:^|\s)xvalid(?!\S)/g , '' );
 }
 
 function checkPasswordStrength(txt)
