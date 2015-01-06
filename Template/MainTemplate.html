@@ -28,12 +28,12 @@
                         <a href="#" class="nav-btn">HOMEPAGE<span></span></a>
                         <span class="top-nav-shadow"></span>
                         <ul>
-                                <li id="homeLI"><span><a href="Home.php">HOME</a></span></li>
-                                <li id="userLI"><span><a href="Settings.php">Settings</a></span></li>
-                                <li id="regLI"><span><a href="SchoolRegistration.php">School Registration</a></span></li>
-                                <li id="sinupLI"><span><a href="SignUp.php">Sign Up</a></span></li>
-                                <li id="sininLI"><span><a href="SignIn.php">Sign In</a></span></li>
-                                <li id="sininLI"><span><a href="SignOut.php">Sign Out</a></span></li>
+                                <li id="homeLINK"><span><a href="Home.php">HOME</a></span></li>
+                                <li id="settingsLINK"><span><a href="Settings.php">Settings</a></span></li>
+                                <li id="schoolregistrationLINK"><span><a href="SchoolRegistration.php">School Registration</a></span></li>
+                                <li id="signupLINK"><span><a href="SignUp.php">Sign Up</a></span></li>
+                                <li id="signinLINK"><span><a href="SignIn.php">Sign In</a></span></li>
+                                <li id="homeLINK"><span><a href="SignOut.php">Sign Out</a></span></li>
                         </ul>
                 </div>
         </nav>
@@ -52,7 +52,7 @@
                         <div class="container">
                                 <!-- testimonial -->
                                 <div class="testimonial">
-                                        <h2><?php echo $content_title; ?></h2>
+                                    <h1 style="font-family:'Ubuntu', sans-serif; color: #2d2d2d; font-size: 36px; font-weight: bold;"><?php echo $content_title; ?></h1>    
                                         <?php echo $content; ?>
                                 </div>
                         </div>
@@ -129,12 +129,12 @@
 <script>
     
         function loaded(){
-            document.getElementById("homeLI").className = document.getElementById("homeLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-            document.getElementById("userLI").className = document.getElementById("userLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-            document.getElementById("regLI").className = document.getElementById("regLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
+            document.getElementById("homeLINK").className = document.getElementById("homeLINK").className.replace( /(?:^|\s)active(?!\S)/g , '' );
+            document.getElementById("settingsLINK").className = document.getElementById("settingsLINK").className.replace( /(?:^|\s)active(?!\S)/g , '' );
+            document.getElementById("schoolregistrationLINK").className = document.getElementById("schoolregistrationLINK").className.replace( /(?:^|\s)active(?!\S)/g , '' );
             //document.getElementById("proLI").className = document.getElementById("proLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-            document.getElementById("sinupLI").className = document.getElementById("sinupLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
-            document.getElementById("sininLI").className = document.getElementById("sininLI").className.replace( /(?:^|\s)active(?!\S)/g , '' );
+            document.getElementById("signupLINK").className = document.getElementById("signupLINK").className.replace( /(?:^|\s)active(?!\S)/g , '' );
+            document.getElementById("signinLINK").className = document.getElementById("signinLINK").className.replace( /(?:^|\s)active(?!\S)/g , '' );
             
             document.getElementById(LINK).className += " active";
         }

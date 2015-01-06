@@ -53,7 +53,7 @@
     <br style="clear: left;" />
     
     <script src="js/Validation.js" type="text/javascript"></script>
-    <script> var LINK = "sinupLI"; </script>
+    <script> var LINK = "signupLINK"; </script>
     <script>
 	setInitialRequiredCustomValidity();
     </script>
