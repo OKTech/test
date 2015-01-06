@@ -69,15 +69,13 @@ function checkNameValidity(txt, label)
     if(x.value === "")
     {
         clearTextboxClasses(x);
-        x.className += " empty";
-        
+        x.className = "textbox empty";
         x.setCustomValidity('You must fill this field.');
     }
     else if(/^[A-Z][a-z]+$/.test(x.value))
     {
         clearTextboxClasses(x);
         x.className += " xvalid";
-        
         x.setCustomValidity('');
     }
     else

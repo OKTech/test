@@ -11,7 +11,6 @@ class UserController {
     }
     function UpdateUser($user)
     {
-	
 	$userModel = new UserModel();
 	return $userModel -> UpdateUser($user);
     }
