@@ -2,13 +2,12 @@
 <?php
     session_start();
     $header = "";
-    $tip = "";
     $error_message = "";
     $error_tip = "";
     $title = "Sign In";
     $content_title = "";
     $content = "";
-    if(isset($_SESSION['user_firstname']))
+    if(isset($_SESSION['user_id']))
     {
 	session_destroy();
 	header("Location: FrontPage.php");

@@ -1,18 +1,15 @@
 
 <?php
-
-    
-    require './Controllers/SchoolController.php';
-    $SchoolController = new SchoolController();
+    session_start();
     $header = "";
+    $error_tip = "";
+    $error_message = "";
     $title = "School Registration";
     $content_title = "School Registration";
-    $error_tip="";
-    if (!isset($_SESSION['error_message'])) $_SESSION['error_message'] = "";
-    //<!--div id = "error_message_div" style="color:red">' .$_SESSION["error_message"]. '</div-->
+    if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
+    if(isset($_SESSION['error_message']) == 1)$error_message = $_SESSION['error_message'];
+    
     $content = '
-        <br/><br/>
-	
 	<!-- multistep form -->
 	<form id="msform" action="SchoolRegistrationValidation.php" method="POST" noValidation>
 		<!-- progressbar -->
@@ -59,7 +56,7 @@
 
 			    <input value="" placeholder="Phone" class="textbox empty" type="text" name="phoneTXT" id="phone" style="width:100%; height:50px" oninput="checkPhoneValidity(\'phone\')"/>
 			    <input value="" placeholder="Fax" class="textbox empty" id="fax" type="text" name="faxTXT" id="twitter_id" style="width:100%; height:50px" oninput="checkPhoneValidity(\'fax\')"/>
-			    <textarea value="" placeholder="Address" class="addresstextarea textarea empty" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px"/></textarea>
+			    <input value="" placeholder="Address" class="textarea empty" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px" />
 			    <input type="button" name="previous" class="previous action-button" value="Previous" />
 			    <input type="submit" name="srsubmit" class="action-button" value="Submit" id="srsubmit" />
 		    </fieldset> 
@@ -85,6 +82,7 @@
 
 ';
     
+    $_SESSION['error_tip'] = "";
     $_SESSION['error_message'] = "";
     
     include 'Template/MainTemplate.html';

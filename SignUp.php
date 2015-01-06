@@ -1,16 +1,19 @@
 
 <?php
+    session_start();
+    $error_tip = "";
+    $error_message = "";
     $header = "";
+    if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
+    if(isset($_SESSION['error_message']) == 1)$error_message = $_SESSION['error_message'];
+    
     $title = "Sign Up";
     $content_title = "Sign Up";
-    $error_tip="";
-    if(isset($_SESSION['error_tip']) == 1)$error_tip = $_SESSION['error_tip'];
     $content = 
 '
     <div align="left" style="width:60%; padding-left:20%; padding-right:20%;">    
-	<form class="contact_form" action="SignUpValidation.php" name="signUpForm" method="POST">
-	    <br/><br/>
-
+	<form class="contact_form" action="Controllers/UserController.php?functionName=SignUp" name="signUpForm" method="POST">
+	    
 	    <input value="" placeholder="First Name" class="textbox empty" type="text" name="firstname" id="firstname" oninput="checkNameValidity(\'firstname\', \'First Name\')" style="width:42%;" required />
 
 	    <input value="" placeholder="Last Name" class="textbox empty" type="text" name="lastname" id="lastname" oninput="checkNameValidity(\'lastname\', \'Last Name\')" style="width:42%;"  required />
@@ -53,7 +56,9 @@
     ';
     
     
-    if(isset($_SESSION['error_tip']) == 1) $_SESSION['error_tip'] = "";
+    $_SESSION['error_tip'] = "";
+    $_SESSION['error_message'] = "";
+    
     include 'Template/MainTemplate.html';
 ?>
 

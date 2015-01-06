@@ -4,7 +4,15 @@ require ("../Entities/UserEntity.php");
 
 class UserModel
 {
-    function InsertUser(UserEntity $user)
+    static function PerformQuery($query)
+    {
+	require ("Credentials.php");
+	$connection  = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
+	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+	mysqli_close($connection);
+	return $result;
+    }
+    static function InsertUser(UserEntity $user)
     {
 	$query = sprintf("INSERT INTO user
 		(firstname, lastname, email, password, birthday, birthmonth, birthyear, gender)
@@ -12,12 +20,12 @@ class UserModel
 		('%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d')
 		", $user->firstname, $user->lastname, $user->email, $user->password, $user->birthday, $user->birthmonth, $user->birthyear, $user->gender);
 	
-	return $this->PerformQuery($query);
+	return UserModel::PerformQuery($query);
     }
-    function LoginUser($user) // checks for matching username and password
+    static function SelectUser($user) // checks for matching username and password
     {
 	$query  = 'select * from user where email="'.$user->email.'" and password="'.$user->password.'";';
-	$result = $this->PerformQuery($query);
+	$result = UserModel::PerformQuery($query);
 
 	if($result == null) return 0;
 
@@ -36,16 +44,9 @@ class UserModel
 	}
 	return 0;
     }
-    function UpdateUser(UserEntity $user){
+    static function UpdateUser(UserEntity $user){
 	$query='update user set firstname="'.$user->firstname.'" ,lastname="'.$user->lastname.'" ,password="'.$user->password.'" where email="'.$user->email.'"';
-	$this->PerformQuery($query);
-    }
-    function PerformQuery($query){
-	require 'Models/Credentials.php';
-	$connection  = mysqli_connect($host, $username, $password, $database) or die(mysqli_error());
-	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-	mysqli_close($connection);
-	return $result;
+	return UserModel::PerformQuery($query);
     }
 }
 
