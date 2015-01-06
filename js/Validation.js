@@ -18,22 +18,25 @@ function clearTextboxClasses(x)
 function checkPasswordStrength(txt)
 {
     var x = document.getElementById(txt);
-    var strength = 0;
-
-    if(/[A-Z]/.test(x.value))strength++;
-    if(/[a-z]/.test(x.value))strength++;
-    if(/[0-9]/.test(x.value))strength++;
-    if(/[+_)(*&^%$#@!~}{'";:?><.,]/.test(x.value))strength++;
+    var charStrength = 0, lengthStrength = 0, strength;
+    
+    if(/[A-Z]/.test(x.value))charStrength++;
+    if(/[a-z]/.test(x.value))charStrength++;
+    if(/[0-9]/.test(x.value))charStrength++;
+    if(/[+_)(*&^%$#@!~}{'";:?><.,]/.test(x.value))charStrength++;
+    
+    lengthStrength = Math.ceil(x.value.length/4);
     
     if(x.value == "")
     {
         clearTextboxClasses(x);
-        x.className += " empty";
+        x.className = "textbox empty";
         
-        x.setCustomValidity('You must fill this field.');
+        x.setCustomValidity('You must enter a password.');
     }
-    else if(strength <= 2)
+    else if(lengthStrength <= 2)
     {
+        strength = Math.min(lengthStrength, charStrength);
         if(strength == 1)
         {
             clearTextboxClasses(x);
@@ -46,10 +49,11 @@ function checkPasswordStrength(txt)
             x.className += " weakPassword";
         }
         
-        x.setCustomValidity('Weak password. Make it stronger by adding capital and small letters, digits and special characters.');
+        x.setCustomValidity('Weak password. Password has to be at least 8 characters. Make it stronger by adding capital letters, digits and special characters.');
     }
     else
     {
+        strength = Math.max(lengthStrength, charStrength);
         if(strength == 3)
         {
             clearTextboxClasses(x);
@@ -70,7 +74,7 @@ function checkNameValidity(txt, label)
     {
         clearTextboxClasses(x);
         x.className = "textbox empty";
-        x.setCustomValidity('You must fill this field.');
+        x.setCustomValidity('What\'s your ' + label + '?');
     }
     else if(/^[A-Z][a-z]+$/.test(x.value))
     {
