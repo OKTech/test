@@ -1,7 +1,18 @@
 
-function setRequiredCustomValidity(defaultMessage)
+function setInitialRequiredCustomValidity()
 {
-    
+    /*var inputs = document.getElementsByTagName("input");
+
+    for (var i=0; i<inputs.length; i++)
+    {
+        if (inputs[i].required == true)
+        {
+            if(input[i].type == 'radio')
+            {
+                if(input[i].checked == false)
+            }
+        }
+    }*/
 }
 
 function clearTextboxClasses(x)
