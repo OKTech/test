@@ -15,7 +15,7 @@ if(isset($_GET['functionName']))
 }
 else
 {
-    $_POST['error_tip'] = 'Sorry something went wrong.';
+    $_POST['error_tip'] = 'Sorry, something went wrong.';
     if(isset($_POST['user_id']))
 	header("Location:../Home.php");
     else header("Location:../FrontPage.php");
@@ -55,19 +55,19 @@ class UserController {
                 }
                 else
                 {
-                    $_SESSION['error_message'] = "Something went wrong!";
+                    $_SESSION['error_message'] = "Sorry, something went wrong.";
                     header("Location: ../SignUp.php");
                 }
             }
             else
             {
-                $_SESSION['error_message'] = "This Email is already Exists!";
+                $_SESSION['error_message'] = "This email address is already registered.";
                 header("Location: ../SignUp.php");
             }
 	}
 	else
 	{
-	    $_SESSION['error_message'] = "You must fill all fields.";
+	    $_SESSION['error_message'] = "You have to fill all the fields.";
 	    header("Location: ../SignUp.php");
 	}
     }
