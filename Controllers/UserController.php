@@ -118,7 +118,7 @@ class UserController {
 	    extract($_POST);
 	    $user = new UserEntity(-1, "", "", $email, $password, "", "", "", "");
 
-	    if(UserModel::SelectUser($user) == 1)
+	    if(UserModel::SelectUser($user) == true)
 		header("Location: ../Home.php");
 	    else
 	    {

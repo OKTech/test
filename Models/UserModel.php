@@ -1,6 +1,7 @@
 <?php
 
 require ("../Entities/UserEntity.php");
+session_start();
 
 class UserModel
 {
