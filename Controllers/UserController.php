@@ -61,13 +61,13 @@ class UserController {
             }
             else
             {
-                $_SESSION['error_message'] = "This email address is already registered.";
+                $_SESSION['error_tip'] = "This email address is already registered.";
                 header("Location: ../SignUp.php");
             }
 	}
 	else
 	{
-	    $_SESSION['error_message'] = "You have to fill all the fields.";
+	    $_SESSION['error_tip'] = "You have to fill all the fields.";
 	    header("Location: ../SignUp.php");
 	}
     }
@@ -95,13 +95,13 @@ class UserController {
 	    }
 	    else
 	    {
-		$_SESSION['error_message'] = 'Something went wrong.';
+		$_SESSION['error_message'] = 'Sorry, something went wrong.';
 		header("Location: ../Settings.php");
 	    }
 	}
 	else
 	{
-	    $_SESSION['error_message'] = 'You must fill all the fields.';
+	    $_SESSION['error_message'] = 'You have to fill all the fields.';
 	    header("Location: ../Settings.php");
 	}
     }
