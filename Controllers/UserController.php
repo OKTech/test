@@ -47,16 +47,23 @@ class UserController {
 	{
 	    extract($_POST);
 	    $user = new UserEntity(-1, $firstname, $lastname, $email, $password, $birthday, $birthmonth, $birthyear, $gender);
-
-	    if(UserModel::InsertUser($user) == true)
-	    {
-		header("Location: ../RegistrationComplete.php");
-	    }
-	    else
-	    {
-		$_SESSION['error_message'] = "Something went wrong!";
-		header("Location: ../SignUp.php");
-	    }
+            if (UserModel::SelectUser($user) == false)
+            {
+                if(UserModel::InsertUser($user) == true)
+                {
+                    header("Location: ../RegistrationComplete.php");
+                }
+                else
+                {
+                    $_SESSION['error_message'] = "Something went wrong!";
+                    header("Location: ../SignUp.php");
+                }
+            }
+            else
+            {
+                $_SESSION['error_message'] = "This Email is already Exists!";
+                header("Location: ../SignUp.php");
+            }
 	}
 	else
 	{
