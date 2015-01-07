@@ -1,6 +1,5 @@
 <?php
     session_start();
-    session_start();
     $error_tip = "";
     $error_message = "";
     $header = "";
