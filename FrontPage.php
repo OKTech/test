@@ -92,6 +92,7 @@
     
     $_SESSION['error_tip'] = "";
     $_SESSION['error_message'] = "";
+    
     include 'Template/FrontPageTemplate.php';
 ?>
 

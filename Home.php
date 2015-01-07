@@ -12,12 +12,10 @@
     
     $title = "Home";
     $content_title = "Welcome back ".$_SESSION['user_firstname']." ".$_SESSION['user_lastname']."!";
-    $content = "";
-    $content = $content."We have been waiting for you since you last visited! :)
-	<script>
-	    var LINK = 'homeLI';
-	</script>
-    ";
+    $content = 'We have been waiting for you since you last visited! :)
+	
+    <script>var LINK = "homeLINK";</script>
+    ';
     
     $_SESSION['error_tip'] = "";
     $_SESSION['error_message'] = "";

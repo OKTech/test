@@ -17,9 +17,11 @@
     -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
 }
 
+/*
 .textbox:hover, .textarea:hover { 
     background: #FFF9DF; 
 }
+*/
 
 .dropdown {
     
@@ -144,7 +146,7 @@
 
 /*============================== FOR VALIDATION ====================================*/
 
-.textbox.empty:focus{
+.textbox.empty:focus, .textarea.empty:focus{
     //background: #fff url(icons/asterisk3.png) no-repeat 98% center;
     border: 1px solid #7bc1f7; 
     box-shadow: 0px 0px 8px #7bc1f7; 
@@ -152,7 +154,7 @@
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 }
 
-.textbox.empty{
+.textbox.empty, .textarea.empty{
     background: #fff;
     border: 1px solid #d9d9d9; 
     box-shadow: 0px 0px 8px #d9d9d9; 
@@ -160,7 +162,7 @@
     -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
 }
 
-.textbox.xinvalid{
+.textbox.xinvalid, .textarea.xinvalid{
     background: #fff url(icons/invalid_small.png) no-repeat 98% center;
     border: 1px solid #b03535; 
     box-shadow: 0px 0px 8px #b03535; 
@@ -168,7 +170,7 @@
     -webkit-box-shadow: 0px 0px 8px #b03535; 
 }
 
-.textbox.xvalid{
+.textbox.xvalid, .textarea.xvalid{
     background: #fff url(icons/valid_small.png) no-repeat 98% center;
     border: 1px solid #28921f; 
     box-shadow: 0px 0px 8px #28921f; 
