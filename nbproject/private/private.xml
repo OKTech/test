@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/GitHub/test/SignIn.php</file>
-            <file>file:/C:/wamp/www/GitHub/test/SchoolRegistrationComplete.php</file>
-            <file>file:/C:/wamp/www/GitHub/test/SignUp.php</file>
-            <file>file:/C:/wamp/www/GitHub/test/SchoolRegistrationValidation.php</file>
+            <file>file:/C:/wamp/www/GitHub/test/Settings.php</file>
+            <file>file:/C:/wamp/www/GitHub/test/Template/MainTemplate.html</file>
+            <file>file:/C:/wamp/www/GitHub/test/Controllers/UserController.php</file>
+            <file>file:/C:/wamp/www/GitHub/test/css/style.css</file>
+            <file>file:/C:/wamp/www/GitHub/test/Profile.php</file>
             <file>file:/C:/wamp/www/GitHub/test/SchoolRegistration.php</file>
-            <file>file:/C:/wamp/www/GitHub/test/FrontPage.php</file>
             <file>file:/C:/wamp/www/GitHub/test/Home.php</file>
+            <file>file:/C:/wamp/www/GitHub/test/Models/UserModel.php</file>
         </group>
     </open-files>
 </project-private>
