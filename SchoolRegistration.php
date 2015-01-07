@@ -57,7 +57,7 @@
 
 			    <input placeholder="Phone" class="textbox empty" type="text" name="phoneTXT" id="phone" style="width:100%; height:50px" oninput="checkPhoneValidity(\'phone\')"/>
 			    <input placeholder="Fax" class="textbox empty" id="fax" type="text" name="faxTXT" id="twitter_id" style="width:100%; height:50px" oninput="checkPhoneValidity(\'fax\')"/>
-			    <input placeholder="Address" class="textarea empty" type="textarea" name="addressTXT" id="" oninput="" style="width:100%; height:100px;" />
+			    <input placeholder="Address" class="textarea empty" type="textarea" name="addressTXT" id="address_id" oninput="" style="width:100%; height:100px;" />
 			    <input type="button" name="previous" class="previous action-button" value="Previous" />
 			    <input type="submit" name="srsubmit" class="action-button" value="Submit" id="srsubmit" />
 		    </fieldset> 
